@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azmin's Portfolio</title>
+    <link rel="icon" href="assets/pic06.png" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: #fff;
+        }
+
+          /* Footer */
+          footer {
+            text-align: center;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            font-size: 0.9rem;
+            position: relative;
+        }
+
+        footer a {
+            color: #ffd700;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        p {
+            text-align: center;
+            margin: 10px auto;
+            max-width: 600px;
+        }
+
+        .section {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .section h2 {
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+            color: #ffd700;
+        }
+
+        .skills ul,
+        .hobbies ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .skills li,
+        .hobbies li {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 1rem;
+            transition: transform 0.3s;
+        }
+
+        .skills li:hover,
+        .hobbies li:hover {
+            transform: scale(1.1);
+        }
+
+        .links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .link-item {
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .link-item a {
+            display: inline-block;
+            padding: 12px 20px;
+            background: #ffd700;
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .link-item a:hover {
+            background: #ffc107;
+            transform: scale(1.1);
+        }
+
+        .contact {
+            display: block;
+            margin: 20px auto;
+            padding: 12px 30px;
+            background: #ffd700;
+            color: #000;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            text-align: center;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .contact:hover {
+            background: #ffc107;
+            transform: scale(1.05);
+        }
+
+        .profile-card {
+            width: 300px;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            padding: 20px;
+            overflow: hidden;
+            margin: 20px auto;
+        }
+
+        .card-header h2 {
+            font-size: 18px;
+            color: #555;
+            margin: 0 0 20px;
+        }
+
+        .profile-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto;
+            object-fit: cover;
+            border: 3px solid #ddd;
+        }
+
+        .profile-name {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            margin: 15px 0 5px;
+        }
+
+        .profile-title {
+            font-size: 14px;
+            color: #777;
+            margin-bottom: 5px;
+        }
+
+        .profile-education {
+            font-size: 14px;
+            color: #999;
+            margin-bottom: 15px;
+        }
+
+        .social-links {
+            margin: 15px 0;
+        }
+
+        .social-links a {
+            text-decoration: none;
+            font-size: 20px;
+            color: #555;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #007BFF;
+        }
+
+        .social-links .social-icon img {
+            width: 25px;
+            height: 25px;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+
+        .contact-btn {
+            background: #000;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .contact-btn:hover {
+            background: #333;
+        }
+
+        section .btn {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 15px;
+            background: #ffd700;
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        section .btn:hover {
+            background: #ffc107;
+            transform: scale(1.05);
+        }
+
+        section p {
+            font-size: 1rem;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .skills ul,
+            .hobbies ul {
+                grid-template-columns: 1fr;
+            }
+
+            .link-item a {
+                font-size: 0.9rem;
+                padding: 10px 15px;
+            }
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+    <h1>Azmin's Portfolio</h1>
+    <p>Hi! I'm Azmin, a Bachelor Computer Science student at UMT. Let's explore my skills and passions!</p>
+
+    <div class="section about">
+        <h2>About Me</h2>
+        <p>I am passionate about solving problems and creating impactful solutions through technology. Currently
+            pursuing my Bachelor's degree in Computer Science at Universiti Malaysia Terengganu (UMT), I am dedicated to
+            enhancing my expertise in programming, data analysis, and innovative design.</p>
+
+        <div class="profile-card">
+            <div class="card-header">
+                <h2>User Profile Card</h2>
+            </div>
+            <img src="assets/pic04.png" alt="Azmin Hassan" class="profile-image">
+            <h3 class="profile-name">Azmin Hassan</h3>
+            <p class="profile-title">Student in Bachelor of Science in Computer Science</p>
+            <p class="profile-education">Specialist in Math, Programming & Web Development</p>
+
+            <div class="social-links">
+                <a href="https://www.instagram.com/aejminnnnn/" class="social-icon">
+                    <img src="assets/iconig.png" alt="Instagram Icon">
+                    Instagram
+                </a>
+                <a href="https://github.com/aezmine" class="social-icon">
+                    <img src="assets/github.png" alt="GitHub Icon">
+                    GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/mintampan/" class="social-icon">
+                    <img src="assets/iconlinkedin.png" alt="LinkedIn Icon">
+                    LinkedIn
+                </a>
+                <a href="#" class="social-icon">
+                    <img src="assets/facebook.png" alt="Facebook Icon">
+                    Facebook
+                </a>
+            </div>
+
+            <button class="contact-btn">Contact</button>
+        </div>
+    </div>
+
+    <div class="section skills">
+        <h2>Skills</h2>
+        <ul>
+            <li><i class="fas fa-code"></i> Java, Python, HTML, CSS, JavaScript</li>
+            <li><i class="fas fa-chart-bar"></i> Data Analysis & Visualization</li>
+            <li><i class="fas fa-cogs"></i> Algorithms & Mathematical Analysis</li>
+            <li><i class="fas fa-lightbulb"></i> Creative Problem Solving</li>
+            <li><i class="fas fa-laptop-code"></i> Web Design & Development</li>
+            <li><i class="fas fa-database"></i> MySQL Basics</li>
+        </ul>
+    </div>
+
+
+    <!-- Added Link Section -->
+    <section style="text-align: center; margin: 40px auto; color: #fff;">
+        <div class="row text-center">
+            <div>
+                <a href="/weblab/profilecard" class="btn">My Profile Card</a>
+                <a href="/weblab/lab6" class="btn">Simple Quiz</a>
+                <a href="/weblab/lab4" class="btn">Kaki Jiwang</a>
+                <a href="/weblab/lab5" class="btn">Story of UMT</a>
+                <a href="/weblab/lab3" class="btn">Simple Calculator</a>
+                <a href="/exercisebootstrap/" class="btn">Sample of Business Website</a>
+            </div>
+        </div>
+        <p class="text-light mt-3 cool-text">Cooler Webpage Is Coming Soon</p>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Copyright by Azmin S72990 © 2025</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.profile-card {
+    width: 300px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.card-header h2 {
+    font-size: 18px;
+    color: #555;
+    margin: 0 0 20px;
+}
+
+.profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto;
+    object-fit: cover;
+    border: 3px solid #ddd;
+}
+
+.profile-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin: 15px 0 5px;
+}
+
+.profile-title {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.profile-education {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 15px;
+}
+
+.social-links {
+    margin: 15px 0;
+}
+
+.social-links a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #555;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #007BFF;
+}
+
+.social-links .social-icon {
+    position: relative;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-links .logo {
+    position: absolute;
+    top: -10px;
+    /* Adjust as needed */
+    left: -10px;
+    /* Adjust as needed */
+    width: 20px;
+    /* Adjust as needed */
+    height: 20px;
+    /* Adjust as needed */
+    z-index: 1;
+}
+
+.social-links .fa {
+    position: relative;
+    z-index: 2;
+    margin-left: 25px;
+    /* Adjust to prevent overlap with the logo */
+}
+
+.contact-btn {
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact-btn:hover {
+    background: #333;
+}
