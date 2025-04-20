@@ -1,176 +1,262 @@
-/* Additional CSS for new elements */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #fff;
+}
 
-/* Header */
-header {
-    padding: 40px 0;
-    background: #2d3748;
-    color: #f8f9fa;
+/* Footer */
+footer {
     text-align: center;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    font-size: 0.9rem;
+    position: relative;
 }
 
-header .tagline {
-    font-size: 1.1rem;
-    color: #a0aec0;
-    margin-top: 0;
+footer a {
+    color: #ffd700;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-/* Profile and About Layout */
-.intro {
+footer a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+p {
+    text-align: center;
+    margin: 10px auto;
+    max-width: 600px;
+}
+
+.section {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    color: #ffd700;
+}
+
+.skills ul,
+.hobbies ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.skills li,
+.hobbies li {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1rem;
+    transition: transform 0.3s;
+}
+
+.skills li:hover,
+.hobbies li:hover {
+    transform: scale(1.1);
+}
+
+.links {
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-start;
-    gap: 30px;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.link-item {
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.link-item a {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #ffd700;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s, transform 0.3s;
+}
+
+.link-item a:hover {
+    background: #ffc107;
+    transform: scale(1.1);
+}
+
+.contact {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 30px;
+    background: #ffd700;
+    color: #000;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    text-align: center;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.contact:hover {
+    background: #ffc107;
+    transform: scale(1.05);
 }
 
 .profile-card {
-    flex: 0 0 320px;
-    margin: 0;
-}
-
-.about-content {
-    flex: 1;
-    min-width: 300px;
-}
-
-.about-content h2 {
-    text-align: left;
-}
-
-.about-content h2::after {
-    left: 0;
-    transform: none;
-}
-
-.about-content p {
-    text-align: left;
-    margin-left: 0;
-}
-
-/* Projects Grid */
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-    margin-top: 30px;
-}
-
-.project-card {
-    background: #f7fafc;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-    transition: all 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-}
-
-.project-link {
-    display: block;
-    padding: 25px 20px;
+    width: 300px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
-    text-decoration: none;
-    color: #2d3748;
+    padding: 20px;
+    overflow: hidden;
+    margin: 20px auto;
 }
 
-.project-link i {
-    font-size: 2rem;
-    color: #4299e1;
+.card-header h2 {
+    font-size: 18px;
+    color: #555;
+    margin: 0 0 20px;
+}
+
+.profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto;
+    object-fit: cover;
+    border: 3px solid #ddd;
+}
+
+.profile-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin: 15px 0 5px;
+}
+
+.profile-title {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.profile-education {
+    font-size: 14px;
+    color: #999;
     margin-bottom: 15px;
 }
 
-.project-link h3 {
-    margin: 10px 0;
-    font-size: 1.2rem;
-    color: #2d3748;
+.social-links {
+    margin: 15px 0;
 }
 
-.project-link p {
-    font-size: 0.9rem;
-    color: #718096;
-    margin: 5px 0 0;
-    text-align: center;
-}
-
-.future-projects {
-    margin-top: 30px;
-    font-style: italic;
-    color: #718096;
-}
-
-/* Resume Section */
-.resume-container {
-    text-align: center;
-}
-
-.download-btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background: #4299e1;
-    color: #fff;
+.social-links a {
     text-decoration: none;
-    font-weight: 500;
-    border-radius: 6px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    font-size: 20px;
+    color: #555;
+    margin: 0 10px;
+    transition: color 0.3s ease;
 }
 
-.download-btn:hover {
-    background: #3182ce;
-    transform: translateY(-2px);
+.social-links a:hover {
+    color: #007BFF;
 }
 
-.download-btn i {
-    margin-right: 8px;
-}
-
-/* Footer Improvements */
-footer .contact-info {
-    margin-top: 10px;
-}
-
-footer .contact-info a {
-    margin: 0 5px;
-}
-
-footer .contact-info i {
+.social-links .social-icon img {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
     margin-right: 5px;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .intro {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .profile-card {
-        margin-bottom: 20px;
-    }
-    
-    .about-content h2 {
-        text-align: center;
-    }
-    
-    .about-content h2::after {
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    
-    .about-content p {
-        text-align: center;
-    }
-    
-    .project-grid {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    }
+.contact-btn {
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease;
 }
 
-@media (max-width: 480px) {
-    .project-grid {
+.contact-btn:hover {
+    background: #333;
+}
+
+section .btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 15px;
+    background: #ffd700;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s, transform 0.3s;
+}
+
+section .btn:hover {
+    background: #ffc107;
+    transform: scale(1.05);
+}
+
+section p {
+    font-size: 1rem;
+    margin-top: 20px;
+}
+
+/* PDF Preview Section */
+.resume-preview {
+    width: 100%;
+    height: 600px; /* Adjust height as needed */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .skills ul,
+    .hobbies ul {
         grid-template-columns: 1fr;
+    }
+
+    .link-item a {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
+
+    .resume-preview {
+        height: 400px; /* Adjust height for smaller screens */
     }
 }
