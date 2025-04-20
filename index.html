@@ -1,99 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Azmin's Portfolio</title>
-    <link rel="icon" href="assets/pic06.png" type="image/x-icon">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>Azmin Hassan - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <h1>Azmin's Portfolio</h1>
-    <p>Hi! I'm Azmin, a Bachelor Computer Science student at UMT. Let's explore my skills and passions!</p>
+    <header>
+        <div class="container">
+            <h1>Azmin Hassan</h1>
+            <p class="tagline">Computer Science Student & Web Developer</p>
+        </div>
+    </header>
 
-    <div class="section about">
-        <h2>About Me</h2>
-        <p>I am passionate about solving problems and creating impactful solutions through technology. Currently
-            pursuing my Bachelor's degree in Computer Science at Universiti Malaysia Terengganu (UMT), I am dedicated to
-            enhancing my expertise in programming, data analysis, and innovative design.</p>
-
-        <div class="profile-card">
-            <div class="card-header">
-                <h2>User Profile Card</h2>
+    <div class="container">
+        <div class="section intro">
+            <div class="profile-card">
+                <img src="assets/pic04.png" alt="Azmin Hassan" class="profile-image">
+                <h2 class="profile-name">Azmin Hassan</h2>
+                <p class="profile-title">BSc Computer Science Student</p>
+                <p class="profile-education">Universiti Malaysia Terengganu (UMT)</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/aejminnnnn/" class="social-icon" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://github.com/aezmine" class="social-icon" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/mintampan/" class="social-icon" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="social-icon" title="Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                </div>
+                <button class="contact-btn">Contact Me</button>
             </div>
-            <img src="assets/pic04.png" alt="Azmin Hassan" class="profile-image">
-            <h3 class="profile-name">Azmin Hassan</h3>
-            <p class="profile-title">Student in Bachelor of Science in Computer Science</p>
-            <p class="profile-education">Specialist in Math, Programming & Web Development</p>
+            
+            <div class="about-content">
+                <h2>About Me</h2>
+                <p>I am a passionate Computer Science student specializing in programming, data analysis, and web development. Currently pursuing my Bachelor's degree at Universiti Malaysia Terengganu, I strive to create impactful solutions through technology.</p>
+                <p>My approach combines technical skills with creative problem-solving to develop efficient and innovative applications.</p>
+            </div>
+        </div>
 
-            <div class="social-links">
-                <a href="https://www.instagram.com/aejminnnnn/" class="social-icon">
-                    <img src="assets/iconig.png" alt="Instagram Icon">
-                    Instagram
-                </a>
-                <a href="https://github.com/aezmine" class="social-icon">
-                    <img src="assets/github.png" alt="GitHub Icon">
-                    GitHub
-                </a>
-                <a href="https://www.linkedin.com/in/mintampan/" class="social-icon">
-                    <img src="assets/iconlinkedin.png" alt="LinkedIn Icon">
-                    LinkedIn
-                </a>
-                <a href="#" class="social-icon">
-                    <img src="assets/facebook.png" alt="Facebook Icon">
-                    Facebook
+        <div class="section skills">
+            <h2>Technical Skills</h2>
+            <ul>
+                <li><i class="fas fa-code"></i> Java</li>
+                <li><i class="fas fa-code"></i> Python</li>
+                <li><i class="fas fa-code"></i> HTML/CSS</li>
+                <li><i class="fas fa-code"></i> JavaScript</li>
+                <li><i class="fas fa-chart-bar"></i> Data Analysis</li>
+                <li><i class="fas fa-chart-line"></i> Data Visualization</li>
+                <li><i class="fas fa-sitemap"></i> Algorithms</li>
+                <li><i class="fas fa-calculator"></i> Mathematical Analysis</li>
+                <li><i class="fas fa-lightbulb"></i> Problem Solving</li>
+                <li><i class="fas fa-laptop-code"></i> Web Development</li>
+                <li><i class="fas fa-database"></i> MySQL</li>
+                <li><i class="fas fa-palette"></i> UI Design Basics</li>
+            </ul>
+        </div>
+
+        <div class="section projects">
+            <h2>Project Showcase</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <a href="/weblab/profilecard" class="project-link">
+                        <i class="fas fa-id-card"></i>
+                        <h3>Profile Card</h3>
+                        <p>Interactive user profile demonstration</p>
+                    </a>
+                </div>
+                <div class="project-card">
+                    <a href="/weblab/lab6" class="project-link">
+                        <i class="fas fa-question-circle"></i>
+                        <h3>Interactive Quiz</h3>
+                        <p>Simple JavaScript-based quiz application</p>
+                    </a>
+                </div>
+                <div class="project-card">
+                    <a href="/weblab/lab4" class="project-link">
+                        <i class="fas fa-heart"></i>
+                        <h3>Kaki Jiwang</h3>
+                        <p>Creative storytelling project</p>
+                    </a>
+                </div>
+                <div class="project-card">
+                    <a href="/weblab/lab5" class="project-link">
+                        <i class="fas fa-university"></i>
+                        <h3>Story of UMT</h3>
+                        <p>Interactive university history showcase</p>
+                    </a>
+                </div>
+                <div class="project-card">
+                    <a href="/weblab/lab3" class="project-link">
+                        <i class="fas fa-calculator"></i>
+                        <h3>Calculator App</h3>
+                        <p>JavaScript-based calculation tool</p>
+                    </a>
+                </div>
+                <div class="project-card">
+                    <a href="/exercisebootstrap/" class="project-link">
+                        <i class="fas fa-briefcase"></i>
+                        <h3>Business Website</h3>
+                        <p>Bootstrap-powered responsive web design</p>
+                    </a>
+                </div>
+            </div>
+            <p class="future-projects">More Advanced Projects Coming Soon</p>
+        </div>
+
+        <div class="section resume">
+            <h2>Resume</h2>
+            <div class="resume-container">
+                <iframe class="resume-preview" src="https://drive.google.com/file/d/1E3rI39x1K3HpNz0-a5zs2YvwW3-M2rEX/preview" width="100%" height="100%"></iframe>
+                <a href="https://drive.google.com/file/d/1E3rI39x1K3HpNz0-a5zs2YvwW3-M2rEX/view" class="download-btn" target="_blank">
+                    <i class="fas fa-download"></i> Download CV
                 </a>
             </div>
-
-            <button class="contact-btn">Contact</button>
         </div>
     </div>
 
-    <div class="section skills">
-        <h2>Skills</h2>
-        <ul>
-            <li><i class="fas fa-code"></i> Java, Python, HTML, CSS, JavaScript</li>
-            <li><i class="fas fa-chart-bar"></i> Data Analysis & Visualization</li>
-            <li><i class="fas fa-cogs"></i> Algorithms & Mathematical Analysis</li>
-            <li><i class="fas fa-lightbulb"></i> Creative Problem Solving</li>
-            <li><i class="fas fa-laptop-code"></i> Web Design & Development</li>
-            <li><i class="fas fa-database"></i> MySQL Basics</li>
-        </ul>
-
-        
-    <section style="text-align: center; margin: 40px auto; color: #fff;">
-        <div class="row text-center">
-            <div>
-                <a href="/weblab/profilecard" class="btn">My Profile Card</a>
-                <a href="/weblab/lab6" class="btn">Simple Quiz</a>
-                <a href="/weblab/lab4" class="btn">Kaki Jiwang</a>
-                <a href="/weblab/lab5" class="btn">Story of UMT</a>
-                <a href="/weblab/lab3" class="btn">Simple Calculator</a>
-                <a href="/exercisebootstrap/" class="btn">Sample of Business Website</a>
-            </div>
-        </div>
-        <p class="text-light mt-3 cool-text">Cooler Webpage Is Coming Soon</p>
-    </section>
-    </div>
-
-    <!-- Resume PDF Preview Section -->
-    <div class="section">
-        <h2>Resume Preview</h2>
-        <iframe class="resume-preview" 
-        src="https://drive.google.com/file/d/1E3rI39x1K3HpNz0-a5zs2YvwW3-M2rEX/preview" 
-        width="100%" height="100%">
-</iframe>
-    </div>
-
-    
-
-    <!-- Footer Section -->
     <footer>
-        <p>Copyright by Azmin S72990 © 2025</p>
+        <div class="container">
+            <p>© 2025 Azmin Hassan | Computer Science Student (S72990) | UMT</p>
+            <p class="contact-info">
+                <a href="mailto:contact@azminhassan.com"><i class="fas fa-envelope"></i> Email</a> |
+                <a href="https://www.linkedin.com/in/mintampan/"><i class="fab fa-linkedin"></i> LinkedIn</a> |
+                <a href="https://github.com/aezmine"><i class="fab fa-github"></i> GitHub</a>
+            </p>
+        </div>
     </footer>
 </body>
-
 </html>
