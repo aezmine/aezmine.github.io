@@ -2,57 +2,67 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #1e3c72, #2a5298);
-    color: #fff;
+    /* Deeper, more sophisticated cool blue gradient */
+    background: linear-gradient(135deg, #0f1c2e, #1a2a40);
+    color: #e0e0e0; /* Lighter text for better contrast on dark background */
 }
 
 /* Footer */
 footer {
     text-align: center;
     padding: 15px;
-    background: rgba(0, 0, 0, 0.8);
-    color: #fff;
+    background: rgba(0, 0, 0, 0.6); /* Slightly more transparent than before */
+    color: #b0b0b0; /* Softer white for footer text */
     font-size: 0.9rem;
     position: relative;
+    /* Added subtle top border for separation */
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 footer a {
-    color: #ffd700;
+    color: #4CAF50; /* A modern green accent for links */
     text-decoration: none;
     font-weight: bold;
 }
 
 footer a:hover {
     text-decoration: underline;
+    color: #66BB6A; /* Lighter green on hover */
 }
 
 h1 {
     text-align: center;
-    margin-top: 20px;
-    font-size: 2.5rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-top: 40px; /* Increased margin for better spacing */
+    font-size: 3rem; /* Slightly larger heading */
+    color: #f0f0f0; /* Brighter white for main heading */
+    text-shadow: 0 0 15px rgba(0, 255, 255, 0.3), 0 0 5px rgba(0, 255, 255, 0.2); /* Cool glow effect */
+    letter-spacing: 1.5px; /* Slight letter spacing for style */
 }
 
 p {
     text-align: center;
-    margin: 10px auto;
-    max-width: 600px;
+    margin: 15px auto; /* Adjusted margin */
+    max-width: 700px; /* Slightly wider paragraphs */
+    line-height: 1.8; /* Improved readability */
+    color: #c0c0c0; /* Softer paragraph text */
 }
 
 .section {
-    max-width: 800px;
-    margin: 30px auto;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    max-width: 850px; /* Slightly wider sections */
+    margin: 40px auto; /* Increased margin for better separation between sections */
+    padding: 30px; /* Increased padding */
+    background: rgba(255, 255, 255, 0.05); /* Very subtle transparency for depth */
+    border-radius: 15px; /* Slightly more rounded corners */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4); /* Stronger, deeper shadow */
+    border: 1px solid rgba(255, 255, 255, 0.08); /* Subtle border for definition */
 }
 
 .section h2 {
     text-align: center;
-    margin-bottom: 15px;
-    font-size: 1.8rem;
-    color: #ffd700;
+    margin-bottom: 25px; /* Increased margin */
+    font-size: 2.2rem; /* Larger subheadings */
+    color: #78a1e2; /* A calming blue for section headings */
+    text-shadow: 0 0 8px rgba(120, 161, 226, 0.5); /* Subtle glow */
 }
 
 .skills ul,
@@ -60,31 +70,44 @@ p {
     list-style: none;
     padding: 0;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* More flexible grid */
+    gap: 15px; /* Increased gap */
 }
 
 .skills li,
 .hobbies li {
-    background: rgba(0, 0, 0, 0.3);
-    padding: 10px;
-    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.2); /* Darker, more integrated background */
+    padding: 12px; /* Slightly more padding */
+    border-radius: 10px; /* Slightly more rounded corners */
     text-align: center;
-    font-size: 1rem;
-    transition: transform 0.3s;
+    font-size: 1.05rem; /* Slightly larger text */
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    color: #e0e0e0; /* Text color */
+    border: 1px solid rgba(255, 255, 255, 0.05); /* Subtle border */
+    display: flex; /* Flex for icon alignment */
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* Space between icon and text */
 }
 
 .skills li:hover,
 .hobbies li:hover {
-    transform: scale(1.1);
+    transform: translateY(-5px) scale(1.03); /* More pronounced lift */
+    background: rgba(0, 0, 0, 0.4); /* Darker on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Deeper shadow on hover */
+}
+
+/* Font Awesome icon color within skills */
+.skills li .fas {
+    color: #4CAF50; /* Green accent for skill icons */
 }
 
 .links {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
+    gap: 20px; /* Increased gap for buttons */
+    margin-top: 30px; /* Increased margin */
 }
 
 .link-item {
@@ -94,169 +117,216 @@ p {
 
 .link-item a {
     display: inline-block;
-    padding: 12px 20px;
-    background: #ffd700;
-    color: #000;
+    padding: 14px 25px; /* Larger padding for buttons */
+    background: #4CAF50; /* Green accent for buttons */
+    color: #000; /* Black text on green */
     text-decoration: none;
     font-weight: bold;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: background 0.3s, transform 0.3s;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); /* Stronger shadow */
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    letter-spacing: 0.5px;
 }
 
 .link-item a:hover {
-    background: #ffc107;
-    transform: scale(1.1);
+    background: #66BB6A; /* Lighter green on hover */
+    transform: translateY(-3px) scale(1.05); /* Lift and slight scale */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 .contact {
     display: block;
-    margin: 20px auto;
-    padding: 12px 30px;
-    background: #ffd700;
-    color: #000;
-    font-size: 1.2rem;
+    margin: 30px auto; /* Adjusted margin */
+    padding: 15px 35px; /* Larger padding */
+    background: #007BFF; /* Primary blue for contact button */
+    color: #fff;
+    font-size: 1.3rem; /* Larger font size */
     font-weight: bold;
     border: none;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
     cursor: pointer;
     text-align: center;
-    transition: background 0.3s, transform 0.3s;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 
 .contact:hover {
-    background: #ffc107;
-    transform: scale(1.05);
+    background: #0056b3; /* Darker blue on hover */
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
+/* --- Profile Card Specific Styles --- */
 .profile-card {
-    width: 300px;
-    background: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 320px; /* Slightly wider card */
+    background: #25334d; /* Darker background for the card itself */
+    border-radius: 15px; /* More rounded corners */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Enhanced shadow */
     text-align: center;
-    padding: 20px;
+    padding: 25px; /* More padding */
     overflow: hidden;
-    margin: 20px auto;
+    margin: 30px auto; /* Adjusted margin */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
 }
 
 .card-header h2 {
-    font-size: 18px;
-    color: #555;
-    margin: 0 0 20px;
+    font-size: 20px; /* Slightly larger */
+    color: #e0e0e0; /* Lighter color for card header */
+    margin: 0 0 25px; /* Adjusted margin */
 }
 
 .profile-image {
-    width: 120px;
-    height: 120px;
+    width: 130px; /* Slightly larger image */
+    height: 130px;
     border-radius: 50%;
     margin: 0 auto;
     object-fit: cover;
-    border: 3px solid #ddd;
+    border: 4px solid #4CAF50; /* Green border around profile picture */
+    box-shadow: 0 0 15px rgba(76, 175, 80, 0.5); /* Matching glow for profile pic */
 }
 
 .profile-name {
-    font-size: 20px;
+    font-size: 24px; /* Larger name */
     font-weight: bold;
-    color: #333;
-    margin: 15px 0 5px;
+    color: #f0f0f0; /* Brighter name color */
+    margin: 20px 0 8px; /* Adjusted margin */
 }
 
 .profile-title {
-    font-size: 14px;
-    color: #777;
-    margin-bottom: 5px;
+    font-size: 15px; /* Slightly larger */
+    color: #b0b0b0; /* Softer color */
+    margin-bottom: 8px;
 }
 
 .profile-education {
-    font-size: 14px;
-    color: #999;
-    margin-bottom: 15px;
+    font-size: 15px;
+    color: #909090; /* Even softer color */
+    margin-bottom: 20px;
 }
 
+/* --- SOCIAL LINKS CENTERING --- */
 .social-links {
-    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px; /* Increased gap between social icons */
+    flex-wrap: wrap;
+    margin: 20px 0; /* Adjusted margin */
 }
 
 .social-links a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-decoration: none;
-    font-size: 20px;
-    color: #555;
-    margin: 0 10px;
-    transition: color 0.3s ease;
+    font-size: 15px; /* Adjusted font size for text below icon */
+    color: #c0c0c0; /* Softer initial color for social icons */
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .social-links a:hover {
-    color: #007BFF;
+    color: #4CAF50; /* Green accent on hover */
+    transform: translateY(-5px); /* More pronounced lift effect on hover */
 }
 
 .social-links .social-icon img {
-    width: 25px;
-    height: 25px;
-    vertical-align: middle;
-    margin-right: 5px;
+    width: 30px; /* Slightly larger icons */
+    height: 30px;
+    margin-bottom: 8px; /* Increased space between icon and text */
+    /* Added subtle shadow/glow to icons */
+    filter: drop-shadow(0 0 5px rgba(0, 255, 255, 0.3));
+    transition: filter 0.3s ease;
 }
 
+.social-links a:hover .social-icon img {
+    filter: drop-shadow(0 0 8px rgba(76, 175, 80, 0.7)); /* Green glow on hover */
+}
+
+
 .contact-btn {
-    background: #000;
+    background: #007BFF; /* Primary blue for contact button */
     color: #fff;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 14px;
+    padding: 12px 25px; /* Larger padding */
+    border-radius: 8px;
+    font-size: 16px; /* Larger font */
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .contact-btn:hover {
-    background: #333;
+    background: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
 
+/* Styles for the "My Profile Card" etc. buttons outside the profile card */
 section .btn {
     display: inline-block;
     margin: 10px;
-    padding: 10px 15px;
-    background: #ffd700;
+    padding: 12px 20px; /* Slightly larger padding */
+    background: #4CAF50; /* Green accent for these buttons */
     color: #000;
     text-decoration: none;
     font-weight: bold;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: background 0.3s, transform 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 
 section .btn:hover {
-    background: #ffc107;
-    transform: scale(1.05);
+    background: #66BB6A; /* Lighter green on hover */
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
 
 section p {
-    font-size: 1rem;
-    margin-top: 20px;
+    font-size: 1.05rem; /* Slightly larger text */
+    margin-top: 25px; /* Adjusted margin */
+    color: #c0c0c0; /* Consistent text color */
 }
 
 /* PDF Preview Section */
 .resume-preview {
     width: 100%;
-    height: 600px; /* Adjust height as needed */
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    margin-top: 20px;
+    height: 650px; /* Slightly increased height */
+    border: 2px solid #3a5068; /* Solid border to match theme */
+    border-radius: 10px;
+    margin-top: 25px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Consistent shadow */
 }
 
 @media (max-width: 768px) {
-    .skills ul,
-    .hobbies ul {
-        grid-template-columns: 1fr;
+    h1 {
+        font-size: 2.5rem;
     }
 
-    .link-item a {
-        font-size: 0.9rem;
-        padding: 10px 15px;
+    .section {
+        padding: 20px;
+        margin: 25px auto;
+    }
+
+    .section h2 {
+        font-size: 1.8rem;
+    }
+
+    .skills ul,
+    .hobbies ul {
+        grid-template-columns: 1fr; /* Stack on smaller screens */
+    }
+
+    .profile-card {
+        width: 90%; /* Responsive width for card */
+        padding: 20px;
+    }
+
+    .link-item a,
+    .contact {
+        font-size: 1rem;
+        padding: 10px 18px;
     }
 
     .resume-preview {
-        height: 400px; /* Adjust height for smaller screens */
+        height: 450px; /* Adjust height for smaller screens */
     }
 }
