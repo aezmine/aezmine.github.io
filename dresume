@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Azmin Hassan Resume</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f4f4f4;
+    }
+
+    .page {
+        width: 210mm;
+        height: 297mm;
+        margin: auto;
+        background: white;
+        padding: 18mm;
+        box-sizing: border-box;
+    }
+
+    h1 {
+        margin: 0;
+        font-size: 22px;
+        letter-spacing: 1px;
+    }
+
+    .contact {
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
+
+    h2 {
+        font-size: 14px;
+        border-bottom: 1px solid #000;
+        margin-top: 10px;
+        margin-bottom: 4px;
+    }
+
+    p, li {
+        font-size: 12px;
+        line-height: 1.35;
+        margin: 2px 0;
+    }
+
+    ul {
+        padding-left: 15px;
+        margin: 0;
+    }
+
+    .section {
+        margin-bottom: 6px;
+    }
+</style>
+</head>
+
+<body>
+<div class="page">
+
+    <h1>AZMIN HASSAN</h1>
+    <div class="contact">
+        Address: Pahang, Raub <br>
+        Phone: +60-1139018046 | Email: aezmine@gmail.com <br>
+        LinkedIn: linkedin.com/in/aezmine | Portfolio: aezmine.github.io
+    </div>
+
+    <div class="section">
+        <h2>CAREER OBJECTIVE</h2>
+        <p>
+            Computer Science undergraduate specializing in Maritime Informatics, seeking a Java Developer or backend-related role.
+            Passionate about building systems and improving efficiency through programming, database management, and problem-solving.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>EDUCATION</h2>
+        <p>
+            Bachelor of Computer Science with Maritime Informatics (Honours)<br>
+            Universiti Malaysia Terengganu (UMT) | Expected Graduation: 2027<br>
+            Current CGPA: 3.71
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>PROJECTS</h2>
+
+        <p><b>UMT Classroom Booking System</b></p>
+        <ul>
+            <li>Developed web-based system using Java, JSP, and MySQL</li>
+            <li>Implemented booking conflict detection and database integration</li>
+        </ul>
+
+        <p><b>Virtual Repository Kelulut System (In Progress)</b></p>
+        <ul>
+            <li>Developing digital repository system for kelulut research data in UMT</li>
+            <li>Focus on data organization, accessibility, and backend logic</li>
+        </ul>
+
+        <p><b>Java Automation Scripts</b></p>
+        <ul>
+            <li>Built scripts to automate repetitive tasks and improve efficiency</li>
+        </ul>
+
+    </div>
+
+    <div class="section">
+        <h2>WORK EXPERIENCE</h2>
+
+        <p><b>Crew Trainee | McDonald’s (2023)</b></p>
+        <ul>
+            <li>Maintained efficiency in fast-paced environment</li>
+            <li>Collaborated with team to ensure service quality</li>
+        </ul>
+
+        <p><b>Part-Time | J&T Express & Shopee (2024–2025)</b></p>
+        <ul>
+            <li>Handled parcel sorting and logistics operations accurately</li>
+        </ul>
+
+    </div>
+
+    <div class="section">
+        <h2>SKILLS</h2>
+        <ul>
+            <li>Java Programming (Basic to Intermediate)</li>
+            <li>MySQL Database Management</li>
+            <li>Web Development (HTML, CSS, JavaScript)</li>
+            <li>Git & GitHub (Basic)</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>QUALITIES</h2>
+        <ul>
+            <li>Problem-Solving Skills</li>
+            <li>Fast Learner & Adaptable</li>
+            <li>Team Collaboration</li>
+            <li>Responsible & Disciplined</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>LANGUAGES</h2>
+        <ul>
+            <li>English – Intermediate (Good in reading & writing)</li>
+            <li>Bahasa Melayu – Fluent</li>
+        </ul>
+    </div>
+
+   
+
+</div>
+</body>
+</html>
