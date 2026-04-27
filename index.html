@@ -1,101 +1,205 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Azmin's Portfolio</title>
+    <title>Azmin Hassan | Student Software Developer</title>
+    <meta name="description" content="Portfolio of Azmin Hassan, a computer science student focused on software development, web applications, and practical projects.">
     <link rel="icon" href="assets/pic06.png" type="image/x-icon">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <h1>Azmin's Portfolio</h1>
-    <p>Hi! I'm Azmin, a Bachelor Computer Science student at UMT. Let's explore my skills and passions!</p>
+    <a href="#main-content" class="skip-link">Skip to content</a>
 
-    <div class="section about">
-        <h2>About Me</h2>
-        <p>I am passionate about solving problems and creating impactful solutions through technology. Currently
-            pursuing my Bachelor's degree in Computer Science at Universiti Malaysia Terengganu (UMT), I am dedicated to
-            enhancing my expertise in programming, data analysis, and innovative design.</p>
-
-        <div class="profile-card">
-            <div class="card-header">
-                <h2>User Profile Card</h2>
-            </div>
-            <img src="assets/pic04.png" alt="Azmin Hassan" class="profile-image">
-            <h3 class="profile-name">Azmin Hassan</h3>
-            <p class="profile-title">Student in Bachelor of Science in Computer Science</p>
-            <p class="profile-education">Specialist in Math, Programming & Web Development</p>
-
-            <div class="social-links">
-                <a href="https://www.instagram.com/aejminnnnn/" class="social-icon">
-                    <img src="assets/iconig.png" alt="Instagram Icon">
-                    Instagram
-                </a>
-                <a href="https://github.com/aezmine" class="social-icon">
-                    <img src="assets/github.png" alt="GitHub Icon">
-                    GitHub
-                </a>
-                <a href="https://www.linkedin.com/in/aezmine/" class="social-icon">
-                    <img src="assets/iconlinkedin.png" alt="LinkedIn Icon">
-                    LinkedIn
-                </a>
-                <a href="https://www.facebook.com/ayzminn" class="social-icon">
-                    <img src="assets/facebook.png" alt="Facebook Icon">
-                    Facebook
-                </a>
-            </div>
-
-            <button class="contact-btn">Contact</button>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="#home" class="brand">Azmin Hassan</a>
+            <nav aria-label="Primary" class="site-nav">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#education">Education</a>
+                <a href="#additional">Additional</a>
+                <a href="#resume">Resume</a>
+            </nav>
+            <a class="button button-small" href="https://drive.google.com/file/d/1AG2wdrCQM6b_nbh74lMSgAtN5R4Xb-uH/view" target="_blank" rel="noopener noreferrer">View Resume</a>
         </div>
-    </div>
+    </header>
 
-    <div class="section skills">
-        <h2>Skills</h2>
-        <ul>
-            <li><i class="fas fa-code"></i> Java, Python, HTML, CSS, JavaScript</li>
-            <li><i class="fas fa-chart-bar"></i> Data Analysis & Visualization</li>
-            <li><i class="fas fa-cogs"></i> Algorithms & Mathematical Analysis</li>
-            <li><i class="fas fa-lightbulb"></i> Creative Problem Solving</li>
-            <li><i class="fas fa-laptop-code"></i> Web Design & Development</li>
-            <li><i class="fas fa-database"></i> MySQL Basics</li>
-        </ul>
+    <main id="main-content">
+        <section id="home" class="hero">
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <p class="eyebrow">Student Software Developer</p>
+                    <h1>Building practical software with clean code and clear user experience.</h1>
+                    <p class="lead">
+                        Computer Science undergraduate at Universiti Malaysia Terengganu focused on web development, problem solving, and building reliable, user-focused applications. Proactive learner who quickly adapts to new tools and technologies, with a strong drive to continuously improve code quality and technical skills.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="button" href="#projects">See Projects</a>
+                        <a class="button button-ghost" href="https://drive.google.com/file/d/1AG2wdrCQM6b_nbh74lMSgAtN5R4Xb-uH/view" target="_blank" rel="noopener noreferrer">Open Resume</a>
+                    </div>
+                </div>
 
-        
-    <section style="text-align: center; margin: 40px auto; color: #fff;">
-        <div class="row text-center">
-            <div>
-                <a href="/weblab/profilecard" class="btn">My Profile Card</a>
-                <a href="/weblab/lab6" class="btn">Simple Quiz</a>
-                <a href="/weblab/lab4" class="btn">Kaki Jiwang</a>
-                <a href="/weblab/lab5" class="btn">Story of UMT</a>
-                <a href="/weblab/lab3" class="btn">Simple Calculator</a>
-                <a href="/exercisebootstrap/" class="btn">Sample of Business Website</a>
+                <aside class="profile-panel" aria-label="Profile summary">
+                    <img src="assets/pic04.png" alt="Portrait of Azmin Hassan" loading="lazy" width="160" height="160">
+                    <h2>Azmin Hassan</h2>
+                    <p>Computer Science Undergraduate | Software Developer Intern Candidate</p>
+                    <ul class="contact-list">
+                        <li><a href="mailto:aezmine@gmail.com">aezmine@gmail.com</a></li>
+                        <li><a href="tel:+601139018046">+60-1139018046</a></li>
+                        <li><a href="https://www.linkedin.com/in/aezmine/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                        <li><a href="https://minazmin.my" target="_blank" rel="noopener noreferrer">minazmin.my</a></li>
+                        <li><a href="https://github.com/aezmine" target="_blank" rel="noopener noreferrer">github.com/aezmine</a></li>
+                    </ul>
+                </aside>
             </div>
+        </section>
+
+        <section id="about" class="section container">
+            <h2>About Me</h2>
+            <p>
+                Computer Science undergraduate with hands-on experience building backend-driven systems using Java,
+                web technologies, and relational databases. Demonstrates strong ability to design, develop, and
+                optimize functional applications with focus on scalability and data management. Fast learner with
+                proven ability to adapt in fast-paced, high-pressure environments. Actively seeking internship
+                opportunities to contribute to real-world software engineering projects.
+            </p>
+        </section>
+
+        <section id="skills" class="section container">
+            <h2>Technical Skills</h2>
+            <ul class="detail-list" aria-label="Technical skills">
+                <li><strong>Programming:</strong> Java, JavaScript, HTML, CSS</li>
+                <li><strong>Web Development:</strong> Frontend development, basic backend integration</li>
+                <li><strong>Database:</strong> MySQL (CRUD operations, query optimization, schema design)</li>
+                <li><strong>Tools:</strong> Git, GitHub, VS Code, Power BI (basic)</li>
+                <li><strong>Core Strengths:</strong> Problem solving, debugging, algorithmic thinking, system design fundamentals</li>
+            </ul>
+        </section>
+
+        <section id="projects" class="section container">
+            <h2>Project Experience</h2>
+            <div class="project-grid">
+                <article class="project-card">
+                    <h3>Classroom Booking System</h3>
+                    <ul class="stack-list">
+                        <li>Developed a Java-based booking system to manage classroom reservations.</li>
+                        <li>Implemented automation scripts to reduce manual scheduling conflicts.</li>
+                        <li>Designed structured data handling to improve booking efficiency and reliability.</li>
+                    </ul>
+                </article>
+                <article class="project-card">
+                    <h3>Virtual Kelulut Repository System</h3>
+                    <ul class="stack-list">
+                        <li>Built a centralized data management system for kelulut-related information.</li>
+                        <li>Designed and implemented database schema for structured data storage.</li>
+                        <li>Improved data retrieval efficiency and accessibility for users.</li>
+                        <li>Applied core database management principles in a real-world use case.</li>
+                    </ul>
+                </article>
+                <article class="project-card">
+                    <h3>Hackathon X Smart City (Participant)</h3>
+                    <ul class="stack-list">
+                        <li>Collaborated in a team to rapidly prototype a functional solution under time constraints.</li>
+                        <li>Applied problem-solving and critical thinking in a competitive environment.</li>
+                        <li>Contributed to idea development, implementation, and presentation.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section id="experience" class="section container">
+            <h2>Work Experience</h2>
+            <article class="experience-card">
+                <h3>McDonald&apos;s — Crew Trainee</h3>
+                <p class="meta">2023</p>
+                <ul class="stack-list">
+                    <li>Maintained operational efficiency in high-volume, fast-paced environment.</li>
+                    <li>Trained new staff on standard operating procedures (SOP).</li>
+                    <li>Developed strong teamwork, communication, and time management skills.</li>
+                    <li>Demonstrated consistency and discipline under pressure.</li>
+                </ul>
+            </article>
+            <article class="experience-card">
+                <h3>J&amp;T Express &amp; Shopee — Logistics Assistant (Part-Time)</h3>
+                <p class="meta">2024-2025</p>
+                <ul class="stack-list">
+                    <li>Managed parcel sorting and logistics workflow with high accuracy.</li>
+                    <li>Handled time-sensitive operations requiring attention to detail.</li>
+                    <li>Optimized task execution in fast-paced distribution environment.</li>
+                    <li>Strengthened operational efficiency and process reliability awareness.</li>
+                </ul>
+            </article>
+        </section>
+
+        <section id="education" class="section container">
+            <h2>Education</h2>
+            <article class="experience-card">
+                <h3>Universiti Malaysia Terengganu</h3>
+                <p class="meta">2023 - Present</p>
+                <p>Bachelor&apos;s Degree in Computer Science (Maritime Informatics)</p>
+                <p>CGPA: 3.49 (latest)</p>
+                <p>Trend: 3.06 - 3.30 - 3.71 - 3.88 - 3.55</p>
+            </article>
+            <article class="experience-card">
+                <h3>SERI LIPIS COLLEGE | STPM — Science Stream</h3>
+                <p class="meta">2022-2023</p>
+            </article>
+            <article class="experience-card">
+                <h3>SMK (F) SUNGAI KOYAN | SPM — Science Stream</h3>
+                <p class="meta">2020-2022</p>
+            </article>
+        </section>
+
+        <section id="additional" class="section container">
+            <h2>Additional Information</h2>
+            <ul class="detail-list">
+                <li><strong>Languages:</strong> English, Bahasa Melayu</li>
+                <li><strong>Key Strengths:</strong> Strong problem-solving mindset with practical coding application</li>
+                <li><strong>Key Strengths:</strong> Fast learner with ability to quickly adapt to new technologies</li>
+                <li><strong>Key Strengths:</strong> Self-driven and capable of independent project development</li>
+                <li><strong>Key Strengths:</strong> Structured and logical approach to debugging and optimization</li>
+            </ul>
+        </section>
+
+        <section id="resume" class="section container">
+            <div class="resume-heading">
+                <h2>Resume</h2>
+                <a class="button" href="https://drive.google.com/file/d/1AG2wdrCQM6b_nbh74lMSgAtN5R4Xb-uH/view" target="_blank" rel="noopener noreferrer">Open Full Resume</a>
+            </div>
+            <p class="resume-intro">
+                Quick summary: student software developer focused on Java, Python, web development, and practical project delivery.
+                If the preview does not load, use the "Open Full Resume" button above.
+            </p>
+            <iframe
+                class="resume-preview"
+                src="https://drive.google.com/file/d/1AG2wdrCQM6b_nbh74lMSgAtN5R4Xb-uH/preview"
+                title="Azmin Hassan resume preview"
+                loading="lazy">
+            </iframe>
+            <p class="resume-fallback">
+                Direct link:
+                <a href="https://drive.google.com/file/d/1AG2wdrCQM6b_nbh74lMSgAtN5R4Xb-uH/view" target="_blank" rel="noopener noreferrer">
+                    https://drive.google.com/file/d/1AG2wdrCQM6b_nbh74lMSgAtN5R4Xb-uH/view
+                </a>
+            </p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>Copyright © <span id="year"></span> Azmin Hassan</p>
         </div>
-        <p class="text-light mt-3 cool-text">Cooler Webpage Is Coming Soon</p>
-    </section>
-    </div>
-
-    <!-- Resume PDF Preview Section -->
-    <div class="section">
-        <h2>Resume Preview</h2>
-        <iframe class="resume-preview" 
-        src="https://drive.google.com/file/d/1AG2wdrCQM6b_nbh74lMSgAtN5R4Xb-uH/preview" 
-            
-        width="100%" height="100%">
-</iframe>
-    </div>
-
-    
-
-    <!-- Footer Section -->
-    <footer>
-        <p>Copyright by Azmin S72990 © 2025</p>
     </footer>
-</body>
 
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
 </html>
