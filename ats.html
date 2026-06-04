@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azmin Hassan — ATS Resume</title>
+    <meta name="robots" content="noindex">
+    <style>
+        /* ── Screen styles (toolbar) ────────────────────── */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f0f0f0;
+            color: #111;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        /* Sticky toolbar — hidden when printing */
+        .ats-toolbar {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: #1e293b;
+            color: #f8fafc;
+            padding: 12px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            flex-wrap: wrap;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+        }
+
+        .toolbar-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .ats-badge {
+            background: #4F46E5;
+            color: #fff;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            padding: 3px 9px;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+
+        .toolbar-label {
+            font-size: 13px;
+            color: #cbd5e1;
+        }
+
+        .toolbar-hint {
+            font-size: 12px;
+            color: #94a3b8;
+            font-style: italic;
+        }
+
+        .toolbar-actions {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-print {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            background: #4F46E5;
+            color: #fff;
+            border: none;
+            padding: 9px 18px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 700;
+            cursor: pointer;
+            font-family: Arial, sans-serif;
+            transition: background 150ms;
+            text-decoration: none;
+        }
+
+        .btn-print:hover {
+            background: #4338CA;
+            color: #fff;
+        }
+
+        .btn-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            background: transparent;
+            color: #cbd5e1;
+            border: 1px solid #475569;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: Arial, sans-serif;
+            transition: all 150ms;
+            text-decoration: none;
+        }
+
+        .btn-back:hover {
+            background: #334155;
+            color: #f8fafc;
+        }
+
+        /* ── Resume Paper ───────────────────────────────── */
+        .page-wrap {
+            padding: 32px 16px 48px;
+        }
+
+        .resume-page {
+            width: 794px; /* A4 at 96dpi */
+            max-width: 100%;
+            margin: 0 auto;
+            background: #fff;
+            padding: 48px 52px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+        }
+
+        /* ── Header ─────────────────────────────────────── */
+        .r-name {
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            color: #111;
+            margin-bottom: 4px;
+        }
+
+        .r-title {
+            font-size: 13px;
+            color: #444;
+            margin-bottom: 8px;
+        }
+
+        .r-contact {
+            font-size: 12px;
+            color: #333;
+            line-height: 1.7;
+        }
+
+        .r-contact a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .r-sep {
+            color: #999;
+            margin: 0 6px;
+        }
+
+        /* ── Section ─────────────────────────────────────── */
+        .r-section {
+            margin-top: 18px;
+        }
+
+        .r-section-title {
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #111;
+            border-bottom: 1px solid #111;
+            padding-bottom: 3px;
+            margin-bottom: 10px;
+        }
+
+        /* ── Summary ─────────────────────────────────────── */
+        .r-para {
+            font-size: 12px;
+            color: #222;
+            line-height: 1.65;
+        }
+
+        /* ── Skills ──────────────────────────────────────── */
+        .r-skills-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .r-skills-table td {
+            font-size: 12px;
+            color: #222;
+            padding: 2px 0;
+            vertical-align: top;
+        }
+
+        .r-skills-table td:first-child {
+            font-weight: 700;
+            width: 140px;
+            padding-right: 8px;
+            white-space: nowrap;
+        }
+
+        /* ── Experience & Projects ───────────────────────── */
+        .r-entry {
+            margin-bottom: 12px;
+        }
+
+        .r-entry:last-child {
+            margin-bottom: 0;
+        }
+
+        .r-entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 8px;
+            margin-bottom: 3px;
+        }
+
+        .r-entry-title {
+            font-size: 12.5px;
+            font-weight: 700;
+            color: #111;
+        }
+
+        .r-entry-company {
+            font-weight: 400;
+        }
+
+        .r-entry-date {
+            font-size: 11.5px;
+            color: #444;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .r-entry-sub {
+            font-size: 11.5px;
+            color: #444;
+            margin-bottom: 3px;
+            font-style: italic;
+        }
+
+        .r-entry-tech {
+            font-size: 11.5px;
+            color: #333;
+            margin-bottom: 4px;
+        }
+
+        .r-entry-tech span {
+            font-weight: 700;
+        }
+
+        .r-ul {
+            padding-left: 16px;
+            list-style: disc;
+        }
+
+        .r-ul li {
+            font-size: 12px;
+            color: #222;
+            margin-bottom: 2px;
+            line-height: 1.55;
+        }
+
+        /* ── Education ───────────────────────────────────── */
+        .r-gpa {
+            font-size: 12px;
+            font-weight: 700;
+            color: #222;
+        }
+
+        /* ── Additional ──────────────────────────────────── */
+        .r-additional-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .r-additional-table td {
+            font-size: 12px;
+            color: #222;
+            padding: 2px 0;
+            vertical-align: top;
+        }
+
+        .r-additional-table td:first-child {
+            font-weight: 700;
+            width: 120px;
+            padding-right: 8px;
+            white-space: nowrap;
+        }
+
+        /* ── Print ───────────────────────────────────────── */
+        @media print {
+            body { background: white; }
+
+            .ats-toolbar { display: none !important; }
+
+            .page-wrap {
+                padding: 0;
+            }
+
+            .resume-page {
+                width: 100%;
+                max-width: 100%;
+                margin: 0;
+                padding: 18mm 18mm;
+                box-shadow: none;
+            }
+
+            @page {
+                size: A4;
+                margin: 0;
+            }
+        }
+
+        /* ── Mobile ──────────────────────────────────────── */
+        @media (max-width: 640px) {
+            .toolbar-hint { display: none; }
+            .ats-toolbar { padding: 10px 16px; }
+            .resume-page { padding: 28px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ── Toolbar ─────────────────────────────────────── -->
+    <div class="ats-toolbar" role="toolbar" aria-label="ATS resume actions">
+        <div class="toolbar-info">
+            <span class="ats-badge">ATS Mode</span>
+            <span class="toolbar-label">Plain-text resume — optimised for Applicant Tracking Systems</span>
+        </div>
+        <div class="toolbar-actions">
+            <span class="toolbar-hint">Print → Save as PDF to download</span>
+            <a href="index.html" class="btn-back" id="ats-back-btn" aria-label="Back to portfolio">
+                ← Back to Portfolio
+            </a>
+            <button class="btn-print" id="ats-print-btn" onclick="window.print()" aria-label="Print or save as PDF">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="6 9 6 2 18 2 18 9"/>
+                    <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
+                    <rect x="6" y="14" width="12" height="8"/>
+                </svg>
+                Print / Save as PDF
+            </button>
+        </div>
+    </div>
+
+    <!-- ── Resume Paper ────────────────────────────────── -->
+    <div class="page-wrap">
+        <div class="resume-page" role="main" aria-label="ATS resume content">
+
+            <!-- Header -->
+            <h1 class="r-name">AZMIN HASSAN</h1>
+            <p class="r-title">Computer Science Undergraduate | Software Developer</p>
+            <div class="r-contact">
+                <a href="mailto:aezmine@gmail.com">aezmine@gmail.com</a>
+                <span class="r-sep">|</span>
+                <a href="tel:+601139018046">+60-1139018046</a>
+                <span class="r-sep">|</span>
+                <a href="https://www.linkedin.com/in/aezmine/" target="_blank" rel="noopener noreferrer">linkedin.com/in/aezmine</a>
+                <span class="r-sep">|</span>
+                <a href="https://github.com/aezmine" target="_blank" rel="noopener noreferrer">github.com/aezmine</a>
+                <span class="r-sep">|</span>
+                <a href="https://minazmin.my" target="_blank" rel="noopener noreferrer">minazmin.my</a>
+                <span class="r-sep">|</span>
+                Pahang, Malaysia
+            </div>
+
+            <!-- Summary -->
+            <div class="r-section">
+                <h2 class="r-section-title">Professional Summary</h2>
+                <p class="r-para">
+                    Computer Science undergraduate specialising in Maritime Informatics at Universiti Malaysia Terengganu (UMT),
+                    Faculty of Computing and Mathematics. Hands-on experience building backend-driven systems using Java, JSP,
+                    and MySQL. Demonstrates strong ability to design, develop, and optimise functional applications with a focus
+                    on scalability and data management. Fast learner with proven ability to adapt in fast-paced environments.
+                    Actively seeking internship opportunities to contribute to real-world software engineering projects.
+                </p>
+            </div>
+
+            <!-- Skills -->
+            <div class="r-section">
+                <h2 class="r-section-title">Technical Skills</h2>
+                <table class="r-skills-table" aria-label="Technical skills">
+                    <tbody>
+                        <tr>
+                            <td>Programming:</td>
+                            <td>Java, JavaScript, HTML5, CSS3, Python (Basic)</td>
+                        </tr>
+                        <tr>
+                            <td>Web Technologies:</td>
+                            <td>JSP, Servlets, RESTful APIs, Frontend Development, Responsive Design</td>
+                        </tr>
+                        <tr>
+                            <td>Databases:</td>
+                            <td>MySQL (CRUD, Query Optimisation, Schema Design)</td>
+                        </tr>
+                        <tr>
+                            <td>Tools &amp; Platforms:</td>
+                            <td>Git, GitHub, VS Code, Apache Tomcat, ThingSpeak, Power BI (Basic), Raspberry Pi Pico W</td>
+                        </tr>
+                        <tr>
+                            <td>Core Strengths:</td>
+                            <td>Problem Solving, Debugging, Algorithmic Thinking, System Design Fundamentals</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Work Experience -->
+            <div class="r-section">
+                <h2 class="r-section-title">Work Experience</h2>
+
+                <div class="r-entry">
+                    <div class="r-entry-header">
+                        <span class="r-entry-title">Logistics Assistant <span class="r-entry-company">— J&amp;T Express &amp; Shopee (Part-Time)</span></span>
+                        <span class="r-entry-date">2024 – 2025</span>
+                    </div>
+                    <ul class="r-ul">
+                        <li>Managed parcel sorting and logistics workflow with high accuracy across high-volume distribution runs.</li>
+                        <li>Handled time-sensitive operations requiring strong attention to detail and execution precision.</li>
+                        <li>Optimised task execution in a fast-paced distribution environment, strengthening operational efficiency.</li>
+                        <li>Developed discipline, process reliability, and cross-team coordination skills.</li>
+                    </ul>
+                </div>
+
+                <div class="r-entry">
+                    <div class="r-entry-header">
+                        <span class="r-entry-title">Crew Trainee <span class="r-entry-company">— McDonald's</span></span>
+                        <span class="r-entry-date">2023</span>
+                    </div>
+                    <ul class="r-ul">
+                        <li>Maintained operational efficiency in a high-volume, fast-paced environment.</li>
+                        <li>Trained new staff on standard operating procedures (SOPs).</li>
+                        <li>Developed strong teamwork, communication, and time management skills under pressure.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Projects -->
+            <div class="r-section">
+                <h2 class="r-section-title">Project Experience</h2>
+
+                <div class="r-entry">
+                    <div class="r-entry-header">
+                        <span class="r-entry-title">UMT Classroom Booking System</span>
+                    </div>
+                    <p class="r-entry-tech"><span>Technologies:</span> Java, JSP, MySQL, Apache Tomcat, HTML, CSS</p>
+                    <ul class="r-ul">
+                        <li>Developed a full web-based classroom reservation system using Java, JSP, and MySQL.</li>
+                        <li>Implemented booking conflict detection logic to prevent scheduling overlaps.</li>
+                        <li>Designed relational database schema and CRUD operations for efficient booking management.</li>
+                        <li>Deployed on Apache Tomcat; reduced manual scheduling conflicts through automation scripts.</li>
+                    </ul>
+                </div>
+
+                <div class="r-entry">
+                    <div class="r-entry-header">
+                        <span class="r-entry-title">Virtual Kelulut Repository System</span>
+                    </div>
+                    <p class="r-entry-tech"><span>Technologies:</span> Java, MySQL, JSP, Database Design</p>
+                    <ul class="r-ul">
+                        <li>Built a centralised digital data management system for kelulut research data at UMT.</li>
+                        <li>Designed and implemented a relational database schema for structured data storage and retrieval.</li>
+                        <li>Improved data retrieval efficiency and accessibility for researchers and university staff.</li>
+                    </ul>
+                </div>
+
+                <div class="r-entry">
+                    <div class="r-entry-header">
+                        <span class="r-entry-title">Mini Weather Station — IoT Project</span>
+                    </div>
+                    <p class="r-entry-tech"><span>Technologies:</span> Raspberry Pi Pico W, MicroPython, ThingSpeak, IoT Sensors</p>
+                    <ul class="r-ul">
+                        <li>Developed an IoT-based weather monitoring system using Raspberry Pi Pico W.</li>
+                        <li>Integrated temperature, humidity, light, and ultrasonic sensors for real-time data collection.</li>
+                        <li>Connected system to ThingSpeak cloud platform for live monitoring and dashboard visualisation.</li>
+                        <li>Implemented automated Wi-Fi data transmission for continuous remote access.</li>
+                    </ul>
+                </div>
+
+                <div class="r-entry">
+                    <div class="r-entry-header">
+                        <span class="r-entry-title">Hackathon X Smart City — Participant</span>
+                    </div>
+                    <ul class="r-ul">
+                        <li>Collaborated in a team to rapidly prototype a functional Smart City solution under time constraints.</li>
+                        <li>Applied problem-solving and critical thinking in a competitive hackathon environment.</li>
+                        <li>Contributed to idea development, technical implementation, and final presentation.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div class="r-section">
+                <h2 class="r-section-title">Education</h2>
+
+                <div class="r-entry">
+                    <div class="r-entry-header">
+                        <span class="r-entry-title">Universiti Malaysia Terengganu (UMT)</span>
+                        <span class="r-entry-date">2023 – Present</span>
+                    </div>
+                    <p class="r-entry-sub">Bachelor of Computer Science with Maritime Informatics (Honours) | Faculty of Computing and Mathematics</p>
+                    <p class="r-gpa">CGPA: 3.49 | Expected Graduation: 2027</p>
+                    <p style="font-size:11.5px; color:#555; margin-top:2px;">Semester progression: 3.06 &rarr; 3.30 &rarr; 3.71 &rarr; 3.88 &rarr; 3.55</p>
+                </div>
+
+                <div class="r-entry">
+                    <div class="r-entry-header">
+                        <span class="r-entry-title">Seri Lipis College</span>
+                        <span class="r-entry-date">2022 – 2023</span>
+                    </div>
+                    <p class="r-entry-sub">STPM — Science Stream</p>
+                </div>
+
+                <div class="r-entry">
+                    <div class="r-entry-header">
+                        <span class="r-entry-title">SMK (F) Sungai Koyan</span>
+                        <span class="r-entry-date">2020 – 2022</span>
+                    </div>
+                    <p class="r-entry-sub">SPM — Science Stream</p>
+                </div>
+            </div>
+
+            <!-- Additional -->
+            <div class="r-section">
+                <h2 class="r-section-title">Additional Information</h2>
+                <table class="r-additional-table" aria-label="Additional information">
+                    <tbody>
+                        <tr>
+                            <td>Languages:</td>
+                            <td>English (Intermediate — reading &amp; writing), Bahasa Melayu (Fluent, native)</td>
+                        </tr>
+                        <tr>
+                            <td>Strengths:</td>
+                            <td>Problem-solving mindset, fast learner, self-driven, structured debugging approach</td>
+                        </tr>
+                        <tr>
+                            <td>Availability:</td>
+                            <td>Open to internship opportunities; willing to relocate; based in Pahang, Malaysia</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div><!-- /resume-page -->
+    </div><!-- /page-wrap -->
+
+    <script>
+        // Keyboard shortcut: Ctrl/Cmd + P → print (browser default, just here for awareness)
+        // Ctrl/Cmd + D or click toolbar button → print dialog
+        document.getElementById('ats-print-btn').addEventListener('click', () => {
+            window.print();
+        });
+    </script>
+
+</body>
+</html>

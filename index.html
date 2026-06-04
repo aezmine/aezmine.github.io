@@ -1,213 +1,713 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Azmin Hassan | Student Software Developer</title>
-    <meta name="description" content="Portfolio of Azmin Hassan, a computer science student focused on software development, web applications, and practical projects.">
-    <link rel="icon" href="assets/pic06.png" type="image/x-icon">
+
+    <!-- Primary Meta Tags -->
+    <title>Azmin Hassan | Software Developer</title>
+    <meta name="description" content="Portfolio of Azmin Hassan — Computer Science undergraduate at UMT specialising in backend development, Java, and web technologies. Actively seeking software internships.">
+    <meta name="author" content="Azmin Hassan">
+    <meta name="keywords" content="Azmin Hassan, software developer, Java developer, computer science, UMT, portfolio, backend developer, internship">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://minazmin.my/">
+    <meta property="og:title" content="Azmin Hassan | Software Developer">
+    <meta property="og:description" content="Computer Science undergraduate at Universiti Malaysia Terengganu — building practical software with clean code and clear UX.">
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/pic06.png" type="image/png">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Chat Widget Styles -->
+    <link rel="stylesheet" href="chat-widget.css">
 </head>
 <body>
 
-    <header class="site-header">
+    <!-- Skip to content for keyboard users -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- ── Navigation ──────────────────────────────────────── -->
+    <header class="site-header" role="banner">
         <div class="container header-inner">
-            <a href="#home" class="brand">Azmin Hassan</a>
-            <nav aria-label="Primary" class="site-nav">
-                <a href="#about">About</a>
+            <a href="#home" class="brand" aria-label="Azmin Hassan — home">Azmin Hassan</a>
+
+            <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+                <a href="#summary">Summary</a>
                 <a href="#skills">Skills</a>
-                <a href="#projects">Projects</a>
                 <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
                 <a href="#education">Education</a>
-                <a href="#additional">Additional</a>
                 <a href="#resume">Resume</a>
             </nav>
-            <a class="button button-small" href="https://drive.google.com/file/d/1j2l8rjSC6KtfVe8UWvJI1jnZQ3h2L18Y/view" target="_blank" rel="noopener noreferrer">View Resume</a>
+
+            <a
+                href="ats.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-outline btn-sm nav-ats-btn"
+                id="nav-ats-btn"
+                aria-label="Open ATS-optimised resume view (opens in new tab)"
+                title="ATS Mode — plain text resume for job applications"
+            >
+                <!-- Document icon -->
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                    <polyline points="14 2 14 8 20 8"/>
+                    <line x1="16" y1="13" x2="8" y2="13"/>
+                    <line x1="16" y1="17" x2="8" y2="17"/>
+                    <polyline points="10 9 9 9 8 9"/>
+                </svg>
+                ATS Mode
+            </a>
+
+            <button
+                class="nav-toggle"
+                id="nav-toggle"
+                aria-controls="site-nav"
+                aria-expanded="false"
+                aria-label="Toggle navigation menu"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
 
+    <!-- ── Main Content ────────────────────────────────────── -->
     <main id="main-content">
-        <section id="home" class="hero">
+
+        <!-- ── Hero / Header ──────────────────────────────── -->
+        <section id="home" class="hero" aria-label="Profile header">
             <div class="container hero-grid">
+                <!-- Left: Name, title, contact, actions -->
                 <div class="hero-copy">
-                    <p class="eyebrow">Student Software Developer</p>
-                    <h1>Building practical software with clean code and clear user experience.</h1>
-                    <p class="lead">
-                        Computer Science undergraduate at Universiti Malaysia Terengganu focused on web development, problem solving, and building reliable, user-focused applications. Proactive learner who quickly adapts to new tools and technologies, with a strong drive to continuously improve code quality and technical skills.
+                    <h1 class="hero-name">Azmin Hassan</h1>
+                    <p class="hero-title">Computer Science Undergraduate &amp; Software Developer</p>
+                    <p class="hero-summary">
+                        Backend-focused Computer Science undergraduate at Universiti Malaysia Terengganu,
+                        specialising in Java, web development, and database systems. Proactive learner who
+                        quickly adapts to new technologies — actively seeking internship opportunities to
+                        contribute to real-world software engineering projects.
                     </p>
+
+                    <div class="contact-row" role="list" aria-label="Contact information">
+                        <span class="contact-item" role="listitem">
+                            <!-- Email icon -->
+                            <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                                <path d="m2 7 8.5 6a2.5 2.5 0 0 0 3 0L22 7"/>
+                            </svg>
+                            <a href="mailto:aezmine@gmail.com">aezmine@gmail.com</a>
+                        </span>
+                        <span class="contact-item" role="listitem">
+                            <!-- Phone icon -->
+                            <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                            <a href="tel:+601139018046">+60-1139018046</a>
+                        </span>
+                        <span class="contact-item" role="listitem">
+                            <!-- LinkedIn icon -->
+                            <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                <rect x="2" y="9" width="4" height="12"/>
+                                <circle cx="4" cy="4" r="2"/>
+                            </svg>
+                            <a href="https://www.linkedin.com/in/aezmine/" target="_blank" rel="noopener noreferrer">linkedin.com/in/aezmine</a>
+                        </span>
+                        <span class="contact-item" role="listitem">
+                            <!-- GitHub icon -->
+                            <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                            </svg>
+                            <a href="https://github.com/aezmine" target="_blank" rel="noopener noreferrer">github.com/aezmine</a>
+                        </span>
+                        <span class="contact-item" role="listitem">
+                            <!-- Location icon -->
+                            <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            Pahang, Malaysia
+                        </span>
+                        <span class="contact-item" role="listitem">
+                            <!-- Globe / website icon -->
+                            <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <circle cx="12" cy="12" r="10"/>
+                                <line x1="2" y1="12" x2="22" y2="12"/>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                            </svg>
+                            <a href="https://minazmin.my" target="_blank" rel="noopener noreferrer">minazmin.my</a>
+                        </span>
+                    </div>
+
                     <div class="hero-actions">
-                        <a class="button" href="#projects">See Projects</a>
-                        <a class="button button-ghost" href="https://drive.google.com/file/d/1j2l8rjSC6KtfVe8UWvJI1jnZQ3h2L18Y/view" target="_blank" rel="noopener noreferrer">Open Resume</a>
+                        <a
+                            class="btn btn-primary"
+                            href="#projects"
+                            id="hero-projects-btn"
+                        >
+                            View Projects
+                        </a>
+                        <a
+                            class="btn btn-outline"
+                            href="assets/AZMIN_RESUME.pdf"
+                            download="Azmin_Hassan_Resume.pdf"
+                            id="hero-resume-download-btn"
+                            aria-label="Download Azmin Hassan's resume as PDF"
+                        >
+                            <!-- Download icon -->
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                <polyline points="7 10 12 15 17 10"/>
+                                <line x1="12" y1="15" x2="12" y2="3"/>
+                            </svg>
+                            Download Resume
+                        </a>
+                        <a
+                            class="btn btn-outline"
+                            href="https://www.linkedin.com/in/aezmine/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            id="hero-linkedin-btn"
+                            aria-label="Azmin Hassan on LinkedIn (opens in new tab)"
+                        >
+                            LinkedIn
+                        </a>
                     </div>
                 </div>
 
-                <aside class="profile-panel" aria-label="Profile summary">
-                    <img src="assets/pic04.png" alt="Portrait of Azmin Hassan" loading="lazy" width="160" height="160">
-                    <h2>Azmin Hassan</h2>
-                    <p>Computer Science Undergraduate | Software Developer Intern Candidate</p>
-                    <ul class="contact-list">
-                        <li><a href="mailto:aezmine@gmail.com">aezmine@gmail.com</a></li>
-                        <li><a href="tel:+601139018046">+60-1139018046</a></li>
-                        <li><a href="https://www.linkedin.com/in/aezmine/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-                        <li><a href="https://minazmin.my" target="_blank" rel="noopener noreferrer">minazmin.my</a></li>
-                        <li><a href="https://github.com/aezmine" target="_blank" rel="noopener noreferrer">github.com/aezmine</a></li>
-                    </ul>
-                </aside>
+                <!-- Right: Profile photo -->
+                <div class="hero-photo-wrap">
+                    <img
+                        src="assets/pic04.png"
+                        alt="Professional portrait of Azmin Hassan"
+                        class="hero-photo"
+                        width="180"
+                        height="220"
+                        loading="eager"
+                        fetchpriority="high"
+                    >
+                </div>
             </div>
         </section>
 
-        <section id="about" class="section container">
-            <h2>About Me</h2>
-            <p>
-                Computer Science undergraduate with hands-on experience building backend-driven systems using Java,
-                web technologies, and relational databases. Demonstrates strong ability to design, develop, and
-                optimize functional applications with focus on scalability and data management. Fast learner with
-                proven ability to adapt in fast-paced, high-pressure environments. Actively seeking internship
-                opportunities to contribute to real-world software engineering projects.
-            </p>
-        </section>
+        <!-- ── Sections Container ──────────────────────────── -->
+        <div class="main-content">
+            <div class="container">
 
-        <section id="skills" class="section container">
-            <h2>Technical Skills</h2>
-            <ul class="detail-list" aria-label="Technical skills">
-                <li><strong>Programming:</strong> Java, JavaScript, HTML, CSS</li>
-                <li><strong>Web Development:</strong> Frontend development, basic backend integration</li>
-                <li><strong>Database:</strong> MySQL (CRUD operations, query optimization, schema design)</li>
-                <li><strong>Tools:</strong> Git, GitHub, VS Code, Power BI (basic)</li>
-                <li><strong>Core Strengths:</strong> Problem solving, debugging, algorithmic thinking, system design fundamentals</li>
-            </ul>
-        </section>
+                <!-- ── Professional Summary ─────────────────── -->
+                <section id="summary" class="section" aria-labelledby="summary-heading">
+                    <div class="section-header">
+                        <h2 id="summary-heading" class="section-title">Professional Summary</h2>
+                        <div class="section-line" aria-hidden="true"></div>
+                    </div>
+                    <p style="font-size:0.975rem; color:var(--text-secondary); line-height:1.8; max-width:72ch;">
+                        Computer Science undergraduate with hands-on experience building backend-driven systems
+                        using Java, web technologies, and relational databases. Demonstrates strong ability to
+                        design, develop, and optimise functional applications with a focus on scalability and
+                        data management. Fast learner with proven ability to adapt in fast-paced, high-pressure
+                        environments — consistently improving code quality and problem-solving depth across each
+                        semester. Actively seeking internship opportunities to contribute to real-world software
+                        engineering projects.
+                    </p>
+                </section>
 
-        <section id="projects" class="section container">
-            <h2>Project Experience</h2>
-            <div class="project-grid">
-                <article class="project-card">
-                    <h3>Classroom Booking System</h3>
-                    <ul class="stack-list">
-                        <li>Developed a Java-based booking system to manage classroom reservations.</li>
-                        <li>Implemented automation scripts to reduce manual scheduling conflicts.</li>
-                        <li>Designed structured data handling to improve booking efficiency and reliability.</li>
-                    </ul>
-                </article>
-                <article class="project-card">
-                    <h3>Virtual Kelulut Repository System</h3>
-                    <ul class="stack-list">
-                        <li>Built a centralized data management system for kelulut-related information.</li>
-                        <li>Designed and implemented database schema for structured data storage.</li>
-                        <li>Improved data retrieval efficiency and accessibility for users.</li>
-                        <li>Applied core database management principles in a real-world use case.</li>
-                    </ul>
-                </article>
-                <article class="project-card">
-                    <h3>Hackathon X Smart City (Participant)</h3>
-                    <ul class="stack-list">
-                        <li>Collaborated in a team to rapidly prototype a functional solution under time constraints.</li>
-                        <li>Applied problem-solving and critical thinking in a competitive environment.</li>
-                        <li>Contributed to idea development, implementation, and presentation.</li>
-                    </ul>
-                </article>
-                <article class="project-card">
-    <h3>Mini Weather Station IoT Project</h3>
-    <ul class="stack-list">
-        <li>Developed an IoT-based weather monitoring system using Raspberry Pi Pico W.</li>
-        <li>Integrated temperature, humidity, light, and ultrasonic sensors for real-time environmental data collection.</li>
-        <li>Connected the system to ThingSpeak cloud platform for live monitoring and dashboard visualization.</li>
-        <li>Implemented automated Wi-Fi data transmission for continuous remote access and analysis.</li>
-    </ul>
-</article>
-            </div>
-        </section>
+                <!-- ── Technical Skills ──────────────────────── -->
+                <section id="skills" class="section" aria-labelledby="skills-heading">
+                    <div class="section-header">
+                        <h2 id="skills-heading" class="section-title">Technical Skills</h2>
+                        <div class="section-line" aria-hidden="true"></div>
+                    </div>
+                    <div class="skills-groups">
+                        <div class="skill-group">
+                            <span class="skill-group-label">Programming</span>
+                            <div class="skill-tags" role="list" aria-label="Programming languages">
+                                <span class="skill-tag highlight" role="listitem">Java</span>
+                                <span class="skill-tag" role="listitem">JavaScript</span>
+                                <span class="skill-tag" role="listitem">HTML5</span>
+                                <span class="skill-tag" role="listitem">CSS3</span>
+                                <span class="skill-tag" role="listitem">Python (Basic)</span>
+                            </div>
+                        </div>
+                        <div class="skill-group">
+                            <span class="skill-group-label">Web Technologies</span>
+                            <div class="skill-tags" role="list" aria-label="Web technologies">
+                                <span class="skill-tag" role="listitem">JSP</span>
+                                <span class="skill-tag" role="listitem">Servlets</span>
+                                <span class="skill-tag" role="listitem">RESTful APIs</span>
+                                <span class="skill-tag" role="listitem">Frontend Development</span>
+                                <span class="skill-tag" role="listitem">Responsive Design</span>
+                            </div>
+                        </div>
+                        <div class="skill-group">
+                            <span class="skill-group-label">Databases</span>
+                            <div class="skill-tags" role="list" aria-label="Databases">
+                                <span class="skill-tag highlight" role="listitem">MySQL</span>
+                                <span class="skill-tag" role="listitem">CRUD Operations</span>
+                                <span class="skill-tag" role="listitem">Query Optimisation</span>
+                                <span class="skill-tag" role="listitem">Schema Design</span>
+                            </div>
+                        </div>
+                        <div class="skill-group">
+                            <span class="skill-group-label">Tools &amp; Platforms</span>
+                            <div class="skill-tags" role="list" aria-label="Tools and platforms">
+                                <span class="skill-tag" role="listitem">Git</span>
+                                <span class="skill-tag" role="listitem">GitHub</span>
+                                <span class="skill-tag" role="listitem">VS Code</span>
+                                <span class="skill-tag" role="listitem">Apache Tomcat</span>
+                                <span class="skill-tag" role="listitem">ThingSpeak</span>
+                                <span class="skill-tag" role="listitem">Power BI (Basic)</span>
+                                <span class="skill-tag" role="listitem">Raspberry Pi Pico W</span>
+                            </div>
+                        </div>
+                        <div class="skill-group">
+                            <span class="skill-group-label">Core Strengths</span>
+                            <div class="skill-tags" role="list" aria-label="Core strengths">
+                                <span class="skill-tag" role="listitem">Problem Solving</span>
+                                <span class="skill-tag" role="listitem">Debugging</span>
+                                <span class="skill-tag" role="listitem">Algorithmic Thinking</span>
+                                <span class="skill-tag" role="listitem">System Design Fundamentals</span>
+                                <span class="skill-tag" role="listitem">Fast Learner</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-        <section id="experience" class="section container">
-            <h2>Work Experience</h2>
-            <article class="experience-card">
-                <h3>McDonald&apos;s — Crew Trainee</h3>
-                <p class="meta">2023</p>
-                <ul class="stack-list">
-                    <li>Maintained operational efficiency in high-volume, fast-paced environment.</li>
-                    <li>Trained new staff on standard operating procedures (SOP).</li>
-                    <li>Developed strong teamwork, communication, and time management skills.</li>
-                    <li>Demonstrated consistency and discipline under pressure.</li>
-                </ul>
-            </article>
-            <article class="experience-card">
-                <h3>J&amp;T Express &amp; Shopee — Logistics Assistant (Part-Time)</h3>
-                <p class="meta">2024-2025</p>
-                <ul class="stack-list">
-                    <li>Managed parcel sorting and logistics workflow with high accuracy.</li>
-                    <li>Handled time-sensitive operations requiring attention to detail.</li>
-                    <li>Optimized task execution in fast-paced distribution environment.</li>
-                    <li>Strengthened operational efficiency and process reliability awareness.</li>
-                </ul>
-            </article>
-        </section>
+                <!-- ── Work Experience ───────────────────────── -->
+                <section id="experience" class="section" aria-labelledby="experience-heading">
+                    <div class="section-header">
+                        <h2 id="experience-heading" class="section-title">Work Experience</h2>
+                        <div class="section-line" aria-hidden="true"></div>
+                    </div>
+                    <div class="timeline">
 
-        <section id="education" class="section container">
-            <h2>Education</h2>
-            <article class="experience-card">
-                <h3>Universiti Malaysia Terengganu</h3>
-                <p class="meta">2023 - Present</p>
-                <p>Bachelor&apos;s Degree in Computer Science (Maritime Informatics)</p>
-                <p>CGPA: 3.49 (latest)</p>
-                <p>Trend: 3.06 - 3.30 - 3.71 - 3.88 - 3.55</p>
-            </article>
-            <article class="experience-card">
-                <h3>SERI LIPIS COLLEGE | STPM — Science Stream</h3>
-                <p class="meta">2022-2023</p>
-            </article>
-            <article class="experience-card">
-                <h3>SMK (F) SUNGAI KOYAN | SPM — Science Stream</h3>
-                <p class="meta">2020-2022</p>
-            </article>
-        </section>
+                        <article class="timeline-item" aria-label="J&T Express and Shopee experience">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 class="timeline-title">Logistics Assistant <span class="timeline-company">@ J&amp;T Express &amp; Shopee</span></h3>
+                                </div>
+                                <span class="timeline-date">2024 – 2025</span>
+                            </div>
+                            <div class="timeline-body">
+                                <ul>
+                                    <li>Managed parcel sorting and logistics workflow with high accuracy across high-volume distribution runs.</li>
+                                    <li>Handled time-sensitive operations requiring strong attention to detail and execution precision.</li>
+                                    <li>Optimised task execution in a fast-paced distribution environment, strengthening operational efficiency awareness.</li>
+                                    <li>Strengthened discipline, process reliability, and cross-team coordination skills.</li>
+                                </ul>
+                            </div>
+                        </article>
 
-        <section id="additional" class="section container">
-            <h2>Additional Information</h2>
-            <ul class="detail-list">
-                <li><strong>Languages:</strong> English, Bahasa Melayu</li>
-                <li><strong>Key Strengths:</strong> Strong problem-solving mindset with practical coding application</li>
-                <li><strong>Key Strengths:</strong> Fast learner with ability to quickly adapt to new technologies</li>
-                <li><strong>Key Strengths:</strong> Self-driven and capable of independent project development</li>
-                <li><strong>Key Strengths:</strong> Structured and logical approach to debugging and optimization</li>
-            </ul>
-        </section>
+                        <article class="timeline-item" aria-label="McDonald's experience">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 class="timeline-title">Crew Trainee <span class="timeline-company">@ McDonald's</span></h3>
+                                </div>
+                                <span class="timeline-date">2023</span>
+                            </div>
+                            <div class="timeline-body">
+                                <ul>
+                                    <li>Maintained operational efficiency in a high-volume, fast-paced environment.</li>
+                                    <li>Trained new staff on standard operating procedures (SOPs), demonstrating ability to communicate and teach clearly.</li>
+                                    <li>Developed strong teamwork, communication, and time management skills under pressure.</li>
+                                </ul>
+                            </div>
+                        </article>
 
-        <section id="resume" class="section container">
-            <div class="resume-heading">
-                <h2>Resume</h2>
-                <a class="button" href="https://drive.google.com/file/d/1j2l8rjSC6KtfVe8UWvJI1jnZQ3h2L18Y/view" target="_blank" rel="noopener noreferrer">Open Full Resume</a>
-            </div>
-            <p class="resume-intro">
-                Quick summary: student software developer focused on Java, Python, web development, and practical project delivery.
-                If the preview does not load, use the "Open Full Resume" button above.
-            </p>
-            <iframe
-                class="resume-preview"
-                src="https://drive.google.com/file/d/1j2l8rjSC6KtfVe8UWvJI1jnZQ3h2L18Y/preview"
-                title="Azmin Hassan resume preview"
-                loading="lazy">
-            </iframe>
-            <p class="resume-fallback">
-                Direct link:
-                <a href="https://drive.google.com/file/d/1j2l8rjSC6KtfVe8UWvJI1jnZQ3h2L18Y/view" target="_blank" rel="noopener noreferrer">
-    https://drive.google.com/file/d/1ZXN9WBBvRwzOEo0koPcoNh_zrRtmZ4tf/view
-</a>
-            </p>
-        </section>
+                    </div>
+                </section>
+
+                <!-- ── Projects ──────────────────────────────── -->
+                <section id="projects" class="section" aria-labelledby="projects-heading">
+                    <div class="section-header">
+                        <h2 id="projects-heading" class="section-title">Project Experience</h2>
+                        <div class="section-line" aria-hidden="true"></div>
+                    </div>
+                    <div class="project-grid">
+
+                        <article class="project-card" aria-label="UMT Classroom Booking System project">
+                            <div class="project-card-header">
+                                <h3 class="project-title">UMT Classroom Booking System</h3>
+                                <div class="project-links">
+                                    <a
+                                        href="https://github.com/aezmine"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="project-link-btn"
+                                        aria-label="View Classroom Booking System on GitHub"
+                                        title="GitHub"
+                                    >
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-desc">
+                                <ul>
+                                    <li>Developed a full web-based classroom reservation system using Java, JSP, and MySQL.</li>
+                                    <li>Implemented booking conflict detection logic to prevent scheduling overlaps.</li>
+                                    <li>Designed structured database schema and CRUD operations for efficient booking management.</li>
+                                    <li>Deployed on Apache Tomcat; reduced manual scheduling conflicts through automation scripts.</li>
+                                </ul>
+                            </div>
+                            <div class="project-tech" aria-label="Technologies used">
+                                <span class="tech-badge">Java</span>
+                                <span class="tech-badge">JSP</span>
+                                <span class="tech-badge">MySQL</span>
+                                <span class="tech-badge">Apache Tomcat</span>
+                                <span class="tech-badge">HTML/CSS</span>
+                            </div>
+                        </article>
+
+                        <article class="project-card" aria-label="Virtual Kelulut Repository System project">
+                            <div class="project-card-header">
+                                <h3 class="project-title">Virtual Kelulut Repository System</h3>
+                                <div class="project-links">
+                                    <a
+                                        href="https://github.com/aezmine"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="project-link-btn"
+                                        aria-label="View Kelulut Repository System on GitHub"
+                                        title="GitHub"
+                                    >
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-desc">
+                                <ul>
+                                    <li>Built a centralised digital data management system for kelulut research data at UMT.</li>
+                                    <li>Designed and implemented a relational database schema for structured data storage and retrieval.</li>
+                                    <li>Improved data retrieval efficiency and accessibility for researchers and university staff.</li>
+                                    <li>Applied core database management principles to a real-world academic use case.</li>
+                                </ul>
+                            </div>
+                            <div class="project-tech" aria-label="Technologies used">
+                                <span class="tech-badge">Java</span>
+                                <span class="tech-badge">MySQL</span>
+                                <span class="tech-badge">JSP</span>
+                                <span class="tech-badge">Database Design</span>
+                            </div>
+                        </article>
+
+                        <article class="project-card" aria-label="Mini Weather Station IoT project">
+                            <div class="project-card-header">
+                                <h3 class="project-title">Mini Weather Station — IoT</h3>
+                                <div class="project-links">
+                                    <a
+                                        href="https://github.com/aezmine"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="project-link-btn"
+                                        aria-label="View Weather Station project on GitHub"
+                                        title="GitHub"
+                                    >
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-desc">
+                                <ul>
+                                    <li>Developed an IoT-based weather monitoring system using Raspberry Pi Pico W.</li>
+                                    <li>Integrated temperature, humidity, light, and ultrasonic sensors for real-time environmental data collection.</li>
+                                    <li>Connected system to ThingSpeak cloud platform for live monitoring and dashboard visualisation.</li>
+                                    <li>Implemented automated Wi-Fi data transmission for continuous remote access and analysis.</li>
+                                </ul>
+                            </div>
+                            <div class="project-tech" aria-label="Technologies used">
+                                <span class="tech-badge">Raspberry Pi Pico W</span>
+                                <span class="tech-badge">MicroPython</span>
+                                <span class="tech-badge">ThingSpeak</span>
+                                <span class="tech-badge">IoT Sensors</span>
+                                <span class="tech-badge">Wi-Fi</span>
+                            </div>
+                        </article>
+
+                        <article class="project-card" aria-label="Hackathon Smart City project">
+                            <div class="project-card-header">
+                                <h3 class="project-title">Hackathon X Smart City</h3>
+                                <div class="project-links">
+                                </div>
+                            </div>
+                            <div class="project-desc">
+                                <ul>
+                                    <li>Collaborated in a team to rapidly prototype a functional Smart City solution under strict time constraints.</li>
+                                    <li>Applied problem-solving and critical thinking in a competitive hackathon environment.</li>
+                                    <li>Contributed to idea development, technical implementation, and final presentation.</li>
+                                </ul>
+                            </div>
+                            <div class="project-tech" aria-label="Skills demonstrated">
+                                <span class="tech-badge">Team Collaboration</span>
+                                <span class="tech-badge">Rapid Prototyping</span>
+                                <span class="tech-badge">Problem Solving</span>
+                            </div>
+                        </article>
+
+                    </div>
+                </section>
+
+                <!-- ── Education ─────────────────────────────── -->
+                <section id="education" class="section" aria-labelledby="education-heading">
+                    <div class="section-header">
+                        <h2 id="education-heading" class="section-title">Education</h2>
+                        <div class="section-line" aria-hidden="true"></div>
+                    </div>
+                    <div class="education-list">
+
+                        <article class="edu-item" aria-label="Universiti Malaysia Terengganu">
+                            <div class="edu-body">
+                                <h3 class="edu-institution">Universiti Malaysia Terengganu (UMT)</h3>
+                                <p class="edu-degree">Bachelor of Computer Science with Maritime Informatics (Honours)</p>
+                                <p class="edu-detail">Faculty of Computing and Mathematics</p>
+                                <p class="edu-detail">Expected Graduation: 2027</p>
+                                <span class="edu-gpa">CGPA: 3.49 (Latest Semester)</span>
+                                <p class="edu-detail" style="margin-top:0.5rem; font-size:0.8rem;">Semester progression: 3.06 → 3.30 → 3.71 → 3.88 → 3.55 (upward trend)</p>
+                            </div>
+                            <span class="edu-date">2023 – Present</span>
+                        </article>
+
+                        <article class="edu-item" aria-label="Seri Lipis College STPM">
+                            <div class="edu-body">
+                                <h3 class="edu-institution">Seri Lipis College</h3>
+                                <p class="edu-degree">STPM — Science Stream</p>
+                            </div>
+                            <span class="edu-date">2022 – 2023</span>
+                        </article>
+
+                        <article class="edu-item" aria-label="SMK Sungai Koyan SPM">
+                            <div class="edu-body">
+                                <h3 class="edu-institution">SMK (F) Sungai Koyan</h3>
+                                <p class="edu-degree">SPM — Science Stream</p>
+                            </div>
+                            <span class="edu-date">2020 – 2022</span>
+                        </article>
+
+                    </div>
+                </section>
+
+                <!-- ── Additional Information ────────────────── -->
+                <section id="additional" class="section" aria-labelledby="additional-heading">
+                    <div class="section-header">
+                        <h2 id="additional-heading" class="section-title">Additional Information</h2>
+                        <div class="section-line" aria-hidden="true"></div>
+                    </div>
+                    <div class="additional-grid">
+
+                        <div class="additional-card">
+                            <p class="additional-label">Languages</p>
+                            <div class="additional-items">
+                                <span class="additional-item">English — Intermediate (reading &amp; writing)</span>
+                                <span class="additional-item">Bahasa Melayu — Fluent (native)</span>
+                            </div>
+                        </div>
+
+                        <div class="additional-card">
+                            <p class="additional-label">Key Strengths</p>
+                            <div class="additional-items">
+                                <span class="additional-item">Strong problem-solving mindset with practical coding application</span>
+                                <span class="additional-item">Fast learner — quickly adapts to new technologies</span>
+                                <span class="additional-item">Self-driven; capable of independent project development</span>
+                                <span class="additional-item">Structured and logical approach to debugging</span>
+                            </div>
+                        </div>
+
+                        <div class="additional-card">
+                            <p class="additional-label">Availability</p>
+                            <div class="additional-items">
+                                <span class="additional-item">Open to internship opportunities</span>
+                                <span class="additional-item">Willing to relocate for the right role</span>
+                                <span class="additional-item">Based in Pahang, Malaysia</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- ── Resume Section ─────────────────────────── -->
+                <section id="resume" class="section" aria-labelledby="resume-heading">
+                    <div class="section-header">
+                        <h2 id="resume-heading" class="section-title">Resume</h2>
+                        <div class="section-line" aria-hidden="true"></div>
+                    </div>
+
+                    <div class="resume-cta">
+                        <p class="resume-cta-text">
+                            View or download my full resume. Use <strong>ATS Mode</strong> for a plain-text version optimised for job application systems.
+                        </p>
+                        <div class="resume-actions">
+                            <a
+                                class="btn btn-primary"
+                                href="assets/AZMIN_RESUME.pdf"
+                                download="Azmin_Hassan_Resume.pdf"
+                                id="resume-download-btn"
+                                aria-label="Download resume PDF"
+                            >
+                                <!-- Download icon -->
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                    <polyline points="7 10 12 15 17 10"/>
+                                    <line x1="12" y1="15" x2="12" y2="3"/>
+                                </svg>
+                                Download PDF
+                            </a>
+                            <a
+                                class="btn btn-outline"
+                                href="ats.html"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                id="resume-ats-btn"
+                                aria-label="Open ATS-optimised resume view (opens in new tab)"
+                            >
+                                <!-- Document icon -->
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                    <polyline points="14 2 14 8 20 8"/>
+                                    <line x1="16" y1="13" x2="8" y2="13"/>
+                                    <line x1="16" y1="17" x2="8" y2="17"/>
+                                </svg>
+                                ATS Mode
+                            </a>
+                            <a
+                                class="btn btn-outline"
+                                href="https://drive.google.com/file/d/1j2l8rjSC6KtfVe8UWvJI1jnZQ3h2L18Y/view"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                id="resume-view-btn"
+                                aria-label="Open resume on Google Drive (opens in new tab)"
+                            >
+                                Open in Google Drive
+                            </a>
+                        </div>
+                    </div>
+
+                    <iframe
+                        class="resume-preview"
+                        src="https://drive.google.com/file/d/1j2l8rjSC6KtfVe8UWvJI1jnZQ3h2L18Y/preview"
+                        title="Azmin Hassan resume PDF preview"
+                        loading="lazy"
+                        aria-label="Resume preview"
+                    ></iframe>
+
+                    <p class="resume-fallback">
+                        Direct link:
+                        <a href="https://drive.google.com/file/d/1j2l8rjSC6KtfVe8UWvJI1jnZQ3h2L18Y/view" target="_blank" rel="noopener noreferrer">
+                            View on Google Drive ↗
+                        </a>
+                    </p>
+                </section>
+
+            </div><!-- /container -->
+        </div><!-- /main-content -->
+
     </main>
 
-    <footer class="site-footer">
-        <div class="container">
-            <p>Copyright © <span id="year"></span> Azmin Hassan</p>
+    <!-- ── Footer ─────────────────────────────────────────── -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="container footer-inner">
+            <p class="footer-copy">
+                &copy; <span id="year"></span> Azmin Hassan. All rights reserved.
+            </p>
+            <nav class="footer-links" aria-label="Footer links">
+                <a href="https://github.com/aezmine" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://www.linkedin.com/in/aezmine/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="mailto:aezmine@gmail.com">Contact</a>
+            </nav>
         </div>
     </footer>
 
+    <!-- ── Scripts ────────────────────────────────────────── -->
     <script>
-        document.getElementById("year").textContent = new Date().getFullYear();
+        /* ── Year ──────────────────────────────────────────── */
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        /* ── Mobile Nav Toggle ────────────────────────────── */
+        const navToggle = document.getElementById('nav-toggle');
+        const siteNav = document.getElementById('site-nav');
+
+        navToggle.addEventListener('click', () => {
+            const isOpen = siteNav.classList.toggle('open');
+            navToggle.setAttribute('aria-expanded', String(isOpen));
+        });
+
+        // Close nav when a link is clicked on mobile
+        siteNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                siteNav.classList.remove('open');
+                navToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // Close nav on resize to desktop
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 900) {
+                siteNav.classList.remove('open');
+                navToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        /* ── Active Nav Link on Scroll ────────────────────── */
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.site-nav a[href^="#"]');
+
+        const activateNavLink = (id) => {
+            navLinks.forEach(link => {
+                link.classList.toggle('active', link.getAttribute('href') === '#' + id);
+            });
+        };
+
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    activateNavLink(entry.target.id);
+                }
+            });
+        }, {
+            rootMargin: '-30% 0px -60% 0px',
+            threshold: 0
+        });
+
+        sections.forEach(section => sectionObserver.observe(section));
+
+        /* ── Fade-In on Scroll ────────────────────────────── */
+        const fadeObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    fadeObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.08,
+            rootMargin: '0px 0px -40px 0px'
+        });
+
+        document.querySelectorAll('.section').forEach(el => fadeObserver.observe(el));
     </script>
+    <!-- ── Chat Widget ──────────────────────────────────────── -->
+    <!--
+        The floating AI Portfolio Assistant chat bubble.
+        The widget script (chat-widget.js) populates this element.
+        Requires: Firebase Cloud Function deployed and FUNCTION_URL set in chat-widget.js
+    -->
+    <div id="chat-widget-root" aria-live="polite"></div>
+    <script src="chat-widget.js" defer></script>
+
 </body>
 </html>
