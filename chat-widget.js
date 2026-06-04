@@ -135,7 +135,7 @@
         </button>
     </div>
 
-    <p class="chat-disclaimer">Powered by Groq AI · Answers based on portfolio content</p>
+
 </div>
 
 <!-- Floating Trigger Button -->
