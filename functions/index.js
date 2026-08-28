@@ -67,19 +67,19 @@ PERSONAL INFORMATION:
 
 CURRENT STATUS:
 - Computer Science Undergraduate at Universiti Malaysia Terengganu (UMT)
-- Actively seeking software internship opportunities (Java Developer / backend-related roles)
+- Network Engineer Intern at CardBiz (started 3 August 2026)
 - Available to relocate for the right opportunity
 
 PROFESSIONAL SUMMARY:
-Computer Science undergraduate specialising in Maritime Informatics at UMT, Faculty of Computing and Mathematics. Hands-on experience building backend-driven systems using Java, JSP, and MySQL. Demonstrates strong ability to design, develop, and optimise functional applications with a focus on scalability and data management. Fast learner who quickly adapts to new technologies. Actively seeking internship opportunities to contribute to real-world software engineering projects.
+Computer Science undergraduate at Universiti Malaysia Terengganu with hands-on experience in backend development, web technologies, and relational databases, alongside growing practical exposure to IT infrastructure and networking. Currently developing expertise and pursuing a career path in Cloud Computing, Networking, and DevOps. Fast learner with the ability to adapt to new technologies and fast-paced technical environments, with a strong focus on continuous improvement and practical problem-solving. Seeking opportunities to contribute to real-world cloud, network, infrastructure, and software projects.
 
 EDUCATION:
 1. Universiti Malaysia Terengganu (UMT) — 2023 to Present
    - Degree: Bachelor of Computer Science with Maritime Informatics (Honours)
    - Faculty: Faculty of Computing and Mathematics
-   - Current CGPA: 3.49 (latest semester)
+   - Current CGPA: 3.54 (latest semester)
    - Expected Graduation: 2027
-   - Semester GPA Trend: 3.06 → 3.30 → 3.71 → 3.88 → 3.55 (consistently strong)
+   - Semester GPA Trend: 3.06 → 3.30 → 3.71 → 3.88 → 3.55 → 3.81 (consistently strong)
 
 2. Seri Lipis College — 2022 to 2023
    - Qualification: STPM (Malaysia's A-Level equivalent), Science Stream
@@ -102,7 +102,22 @@ Web Technologies:
   - Responsive Web Design
 
 Databases:
-  - MySQL — CRUD operations, query optimisation, schema design
+  - MySQL — CRUD operations, query optimisation, schema design, SQL backup & migration
+
+Networking:
+  - TCP/IP, IP addressing, subnetting, DNS, DHCP
+  - Network troubleshooting, VPN fundamentals, VoIP
+
+Systems & Infrastructure:
+  - Windows Server, software deployment, IT infrastructure
+  - Endpoint security, system troubleshooting
+
+Monitoring & Operations:
+  - Zabbix, network monitoring, log analysis, incident troubleshooting
+
+Cloud & DevOps:
+  - Cloud computing fundamentals, Linux fundamentals
+  - VPS deployment, Git workflows
 
 Tools & Platforms:
   - Git and GitHub (version control)
@@ -156,7 +171,14 @@ PROJECTS:
 
 WORK EXPERIENCE:
 
-1. J&T Express & Shopee — Logistics Assistant (Part-Time)
+1. CardBiz — Network Engineer Intern
+   Period: August 2026 – Present (Started 3 August 2026)
+   Responsibilities:
+   - Started internship as Network Engineer on 3 August 2026
+   - Assisting with network infrastructure, setup, configuration, and troubleshooting
+   - Supporting network operations and monitoring
+
+2. J&T Express & Shopee — Logistics Assistant (Part-Time)
    Period: 2024 – 2025
    Responsibilities:
    - Managed parcel sorting and logistics workflow with high accuracy across high-volume distribution runs
@@ -164,7 +186,7 @@ WORK EXPERIENCE:
    - Optimised task execution in a fast-paced distribution environment
    - Developed discipline, process reliability, and cross-team coordination skills
 
-2. McDonald's — Crew Trainee
+3. McDonald's — Crew Trainee
    Period: 2023
    Responsibilities:
    - Maintained operational efficiency in a high-volume, fast-paced environment
