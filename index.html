@@ -590,7 +590,17 @@
                 </section>
 
                 <!-- ── Resume Section ─────────────────────────── -->
-                <section id="resume" class="section" aria-labelledby="resume-heading">
+                <!-- 
+                    📌 GOOGLE DRIVE RESUME LINK (EDIT HERE ONCE):
+                    Change 'data-gdrive-url' below with your Google Drive link or file ID.
+                    The "Open in Google Drive" button, PDF preview iframe, and direct link will all update automatically!
+                -->
+                <section
+                    id="resume"
+                    class="section"
+                    aria-labelledby="resume-heading"
+                    data-gdrive-url="https://drive.google.com/file/d/1OkCXofpvz6rof-wE3wqWuxB-YvXyEnY-/view"
+                >
                     <div class="section-header">
                         <h2 id="resume-heading" class="section-title">Resume</h2>
                         <div class="section-line" aria-hidden="true"></div>
@@ -634,7 +644,7 @@
                                 ATS Mode
                             </a>
                             <a
-                                class="btn btn-outline"
+                                class="btn btn-outline gdrive-resume-link"
                                 href="https://drive.google.com/file/d/1OkCXofpvz6rof-wE3wqWuxB-YvXyEnY-/view"
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -648,7 +658,7 @@
 
                     <iframe
                         class="resume-preview"
-                        src="https://drive.google.com/file/d/1j2l8rjSC6KtfVe8UWvJI1jnZQ3h2L18Y/preview"
+                        src="https://drive.google.com/file/d/1OkCXofpvz6rof-wE3wqWuxB-YvXyEnY-/preview"
                         title="Azmin Hassan resume PDF preview"
                         loading="lazy"
                         aria-label="Resume preview"
@@ -656,7 +666,13 @@
 
                     <p class="resume-fallback">
                         Direct link:
-                        <a href="https://drive.google.com/file/d/1OkCXofpvz6rof-wE3wqWuxB-YvXyEnY-/view" target="_blank" rel="noopener noreferrer">
+                        <a
+                            class="gdrive-resume-link"
+                            id="resume-fallback-link"
+                            href="https://drive.google.com/file/d/1OkCXofpvz6rof-wE3wqWuxB-YvXyEnY-/view"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             View on Google Drive ↗
                         </a>
                     </p>
@@ -683,6 +699,40 @@
 
     <!-- ── Scripts ────────────────────────────────────────── -->
     <script>
+        /* ── Google Drive Resume Link Auto-Sync ───────────── */
+        // Paste your Google Drive link or file ID once here (or edit 'data-gdrive-url' in the Resume section above).
+        // It automatically updates the button, the preview iframe, and the fallback direct link!
+        const GDRIVE_RESUME_URL = "";
+
+        function syncGoogleDriveResumeLinks() {
+            const resumeSection = document.getElementById('resume');
+            const viewBtn = document.getElementById('resume-view-btn');
+            const fallbackLink = document.getElementById('resume-fallback-link');
+            const previewIframe = document.querySelector('.resume-preview');
+
+            const source = (typeof GDRIVE_RESUME_URL === 'string' && GDRIVE_RESUME_URL.trim()) ||
+                (resumeSection ? resumeSection.getAttribute('data-gdrive-url') : '') ||
+                (viewBtn ? viewBtn.getAttribute('href') : '');
+
+            if (!source || source === '#' || source.startsWith('javascript:')) return;
+
+            // Extract Google Drive File ID (supports /file/d/ID, ?id=ID, /d/ID, or raw ID)
+            const match = source.match(/\/file\/d\/([a-zA-Z0-9_-]+)/) ||
+                          source.match(/[?&]id=([a-zA-Z0-9_-]+)/) ||
+                          source.match(/\/d\/([a-zA-Z0-9_-]+)/);
+            const fileId = match ? match[1] : source.trim();
+
+            if (!fileId) return;
+
+            const viewUrl = `https://drive.google.com/file/d/${fileId}/view`;
+            const previewUrl = `https://drive.google.com/file/d/${fileId}/preview`;
+
+            if (viewBtn) viewBtn.href = viewUrl;
+            if (fallbackLink) fallbackLink.href = viewUrl;
+            if (previewIframe) previewIframe.src = previewUrl;
+        }
+        syncGoogleDriveResumeLinks();
+
         /* ── Year ──────────────────────────────────────────── */
         document.getElementById('year').textContent = new Date().getFullYear();
 
