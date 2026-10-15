@@ -1,29 +1,20 @@
 rules_version = '2';
+
 service cloud.firestore {
   match /databases/{database}/documents {
 
-    // ── chat_messages ──────────────────────────────────────
-    // Written ONLY by the Cloud Function (Firebase Admin SDK).
-    // No client-side read or write allowed.
-    // This ensures visitors cannot read each other's conversations
-    // and cannot write spam directly to Firestore.
-    match /chat_messages/{docId} {
-      allow read:  if false;
-      allow write: if false;
+    // ── Portfolio Configuration ──────────────────────────────
+    // Public read: Anyone can view your latest resume link & work experience.
+    // Secure write: ONLY authenticated admin (mengcb@gmail.com) can save updates.
+    match /portfolio_config/{document} {
+      allow read: if true;
+      allow write: if request.auth != null && request.auth.token.email == 'mengcb@gmail.com';
     }
 
-    // ── rate_limits ────────────────────────────────────────
-    // Used by the Cloud Function to enforce per-session rate limits.
-    // No client-side access allowed.
-    match /rate_limits/{sessionId} {
-      allow read:  if false;
-      allow write: if false;
-    }
-
-    // ── All other documents: deny by default ───────────────
+    // ── Default Lock ─────────────────────────────────────────
+    // Protect all other collections/documents.
     match /{document=**} {
-      allow read:  if false;
-      allow write: if false;
+      allow read, write: if false;
     }
   }
 }
